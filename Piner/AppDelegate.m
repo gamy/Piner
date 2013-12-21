@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"_prefix:set($file $line:<$method>) Config NSLog!");
     // Override point for customization after application launch.
     return YES;
 }
