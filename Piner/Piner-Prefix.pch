@@ -14,4 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "LogUtil.h"
+    #import "MMFileManager.h"
+    #import "NSArray+Ext.h"
+    #import "NSDictionary+Ext.h"
+    #import "NLCoreData.h"
 #endif

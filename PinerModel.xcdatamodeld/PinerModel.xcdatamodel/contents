@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="Piner1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="joinCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="maxNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="oId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="activity" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="guests" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="User" inverseName="joinedActivities" inverseEntity="User" syncable="YES"/>
+        <relationship name="host" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="hostedActivities" inverseEntity="User" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="ChatMessage" representedClassName="ChatMessage" parentEntity="Message" syncable="YES">
+        <relationship name="receiver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <relationship name="sender" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Comment" representedClassName="Comment" parentEntity="Message" syncable="YES">
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="comments" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="sentComments" inverseEntity="User" syncable="YES"/>
+        <relationship name="replyTarget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" syncable="YES"/>
+    </entity>
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qqNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qqWeiboId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sinaWeiboId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weixin" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="province" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Message" representedClassName="Message" isAbstract="YES" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="oid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" syncable="YES"/>
+        <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" syncable="YES"/>
+    </entity>
+    <entity name="Notice" representedClassName="Notice" parentEntity="Message" syncable="YES"/>
+    <entity name="Sound" representedClassName="Sound" syncable="YES">
+        <attribute name="seconds" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fanCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="followCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hostActivityCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="introduce" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isLocalAccount" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="joinActivityCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oid" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="signature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="signupDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Contact" syncable="YES"/>
+        <relationship name="fans" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="User" syncable="YES"/>
+        <relationship name="followers" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="User" syncable="YES"/>
+        <relationship name="hostedActivities" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Activity" inverseName="host" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="joinedActivities" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Activity" inverseName="guests" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Location" syncable="YES"/>
+        <relationship name="receivedComments" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" syncable="YES"/>
+        <relationship name="sentComments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="author" inverseEntity="Comment" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Activity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="User" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Image" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ChatMessage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Comment" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Message" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Notice" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Sound" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Location" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Contact" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

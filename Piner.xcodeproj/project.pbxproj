@@ -19,6 +19,22 @@
 		EA4CDB0618635199008FE822 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0018635199008FE822 /* MJRefreshBaseView.m */; };
 		EA4CDB0718635199008FE822 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0218635199008FE822 /* MJRefreshFooterView.m */; };
 		EA4CDB0818635199008FE822 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0418635199008FE822 /* MJRefreshHeaderView.m */; };
+		EAB82D08186ACBE8003E43AF /* ChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D07186ACBE8003E43AF /* ChatMessage.m */; };
+		EAB82D0B186ACBE9003E43AF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D0A186ACBE9003E43AF /* User.m */; };
+		EAB82D0E186ACBE9003E43AF /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D0D186ACBE9003E43AF /* Message.m */; };
+		EAB82D11186ACBE9003E43AF /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D10186ACBE9003E43AF /* Sound.m */; };
+		EAB82D14186ACBE9003E43AF /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D13186ACBE9003E43AF /* Contact.m */; };
+		EAB82D17186ACBE9003E43AF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D16186ACBE9003E43AF /* Activity.m */; };
+		EAB82D1A186ACBE9003E43AF /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D19186ACBE9003E43AF /* Comment.m */; };
+		EAB82D1D186ACBE9003E43AF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D1C186ACBE9003E43AF /* Location.m */; };
+		EAB82D20186ACBE9003E43AF /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D1F186ACBE9003E43AF /* Image.m */; };
+		EAB82D23186ACBE9003E43AF /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D22186ACBE9003E43AF /* Notice.m */; };
+		EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */; };
+		EACC9C6A1865AC0700BE2017 /* MMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC9C691865AC0700BE2017 /* MMFileManager.m */; };
+		EACC9C6E1865BD5F00BE2017 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC9C6D1865BD5F00BE2017 /* libPods.a */; };
+		EACC9C7218668FA200BE2017 /* NSDictionary+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC9C7118668FA200BE2017 /* NSDictionary+Ext.m */; };
+		EACC9C7518668FF600BE2017 /* NSArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC9C7418668FF600BE2017 /* NSArray+Ext.m */; };
+		EACC9C7818672B7600BE2017 /* PinerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */; };
 		EAE6334F1861F98C0072FED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE6334E1861F98C0072FED8 /* Foundation.framework */; };
 		EAE633511861F98C0072FED8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE633501861F98C0072FED8 /* CoreGraphics.framework */; };
 		EAE633531861F98C0072FED8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE633521861F98C0072FED8 /* UIKit.framework */; };
@@ -70,6 +86,34 @@
 		EA4CDB0218635199008FE822 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
 		EA4CDB0318635199008FE822 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
 		EA4CDB0418635199008FE822 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		EAB82D06186ACBE8003E43AF /* ChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessage.h; sourceTree = "<group>"; };
+		EAB82D07186ACBE8003E43AF /* ChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessage.m; sourceTree = "<group>"; };
+		EAB82D09186ACBE9003E43AF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EAB82D0A186ACBE9003E43AF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		EAB82D0C186ACBE9003E43AF /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		EAB82D0D186ACBE9003E43AF /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		EAB82D0F186ACBE9003E43AF /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		EAB82D10186ACBE9003E43AF /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		EAB82D12186ACBE9003E43AF /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		EAB82D13186ACBE9003E43AF /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		EAB82D15186ACBE9003E43AF /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		EAB82D16186ACBE9003E43AF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		EAB82D18186ACBE9003E43AF /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		EAB82D19186ACBE9003E43AF /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		EAB82D1B186ACBE9003E43AF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		EAB82D1C186ACBE9003E43AF /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		EAB82D1E186ACBE9003E43AF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		EAB82D1F186ACBE9003E43AF /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		EAB82D21186ACBE9003E43AF /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notice.h; sourceTree = "<group>"; };
+		EAB82D22186ACBE9003E43AF /* Notice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notice.m; sourceTree = "<group>"; };
+		EACC63521865631500B6D186 /* PinerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinerModel.xcdatamodel; sourceTree = "<group>"; };
+		EACC9C681865AC0700BE2017 /* MMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFileManager.h; sourceTree = "<group>"; };
+		EACC9C691865AC0700BE2017 /* MMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFileManager.m; sourceTree = "<group>"; };
+		EACC9C6D1865BD5F00BE2017 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		EACC9C7018668FA200BE2017 /* NSDictionary+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Ext.h"; sourceTree = "<group>"; };
+		EACC9C7118668FA200BE2017 /* NSDictionary+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Ext.m"; sourceTree = "<group>"; };
+		EACC9C7318668FF600BE2017 /* NSArray+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Ext.h"; sourceTree = "<group>"; };
+		EACC9C7418668FF600BE2017 /* NSArray+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Ext.m"; sourceTree = "<group>"; };
 		EAE6334B1861F98C0072FED8 /* Piner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE6334E1861F98C0072FED8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAE633501861F98C0072FED8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACC9C6E1865BD5F00BE2017 /* libPods.a in Frameworks */,
 				EAE633711861F98C0072FED8 /* XCTest.framework in Frameworks */,
 				EAE633731861F98C0072FED8 /* UIKit.framework in Frameworks */,
 				EAE633721861F98C0072FED8 /* Foundation.framework in Frameworks */,
@@ -142,6 +187,8 @@
 		EA4CDADA18631284008FE822 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EACC9C6F18668EC600BE2017 /* Extend */,
+				EACC9C641865A4F400BE2017 /* CoreData */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +262,27 @@
 		EA4CDAE218631295008FE822 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */,
+				EAB82D21186ACBE9003E43AF /* Notice.h */,
+				EAB82D22186ACBE9003E43AF /* Notice.m */,
+				EAB82D1E186ACBE9003E43AF /* Image.h */,
+				EAB82D1F186ACBE9003E43AF /* Image.m */,
+				EAB82D1B186ACBE9003E43AF /* Location.h */,
+				EAB82D1C186ACBE9003E43AF /* Location.m */,
+				EAB82D18186ACBE9003E43AF /* Comment.h */,
+				EAB82D19186ACBE9003E43AF /* Comment.m */,
+				EAB82D15186ACBE9003E43AF /* Activity.h */,
+				EAB82D16186ACBE9003E43AF /* Activity.m */,
+				EAB82D12186ACBE9003E43AF /* Contact.h */,
+				EAB82D13186ACBE9003E43AF /* Contact.m */,
+				EAB82D0F186ACBE9003E43AF /* Sound.h */,
+				EAB82D10186ACBE9003E43AF /* Sound.m */,
+				EAB82D0C186ACBE9003E43AF /* Message.h */,
+				EAB82D0D186ACBE9003E43AF /* Message.m */,
+				EAB82D09186ACBE9003E43AF /* User.h */,
+				EAB82D0A186ACBE9003E43AF /* User.m */,
+				EAB82D06186ACBE8003E43AF /* ChatMessage.h */,
+				EAB82D07186ACBE8003E43AF /* ChatMessage.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,6 +330,26 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		EACC9C641865A4F400BE2017 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EACC9C681865AC0700BE2017 /* MMFileManager.h */,
+				EACC9C691865AC0700BE2017 /* MMFileManager.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		EACC9C6F18668EC600BE2017 /* Extend */ = {
+			isa = PBXGroup;
+			children = (
+				EACC9C7018668FA200BE2017 /* NSDictionary+Ext.h */,
+				EACC9C7118668FA200BE2017 /* NSDictionary+Ext.m */,
+				EACC9C7318668FF600BE2017 /* NSArray+Ext.h */,
+				EACC9C7418668FF600BE2017 /* NSArray+Ext.m */,
+			);
+			path = Extend;
+			sourceTree = "<group>";
+		};
 		EAE633421861F98C0072FED8 = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +374,7 @@
 		EAE6334D1861F98C0072FED8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EACC9C6D1865BD5F00BE2017 /* libPods.a */,
 				EAE6334E1861F98C0072FED8 /* Foundation.framework */,
 				EAE633501861F98C0072FED8 /* CoreGraphics.framework */,
 				EAE633521861F98C0072FED8 /* UIKit.framework */,
@@ -473,15 +562,29 @@
 			files = (
 				EA4CDB0718635199008FE822 /* MJRefreshFooterView.m in Sources */,
 				EA4CDAE818633741008FE822 /* MMViewController.m in Sources */,
+				EAB82D0B186ACBE9003E43AF /* User.m in Sources */,
+				EAB82D11186ACBE9003E43AF /* Sound.m in Sources */,
+				EAB82D20186ACBE9003E43AF /* Image.m in Sources */,
+				EAB82D17186ACBE9003E43AF /* Activity.m in Sources */,
+				EAB82D14186ACBE9003E43AF /* Contact.m in Sources */,
+				EAB82D1A186ACBE9003E43AF /* Comment.m in Sources */,
 				EA4CDAF418633804008FE822 /* ActivityController.m in Sources */,
+				EACC9C7218668FA200BE2017 /* NSDictionary+Ext.m in Sources */,
 				EA4CDAF1186337E6008FE822 /* TimelineController.m in Sources */,
+				EAB82D23186ACBE9003E43AF /* Notice.m in Sources */,
 				EAE6335F1861F98C0072FED8 /* AppDelegate.m in Sources */,
+				EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */,
 				EA4CDAEB1863375A008FE822 /* MMTableViewController.m in Sources */,
+				EAB82D0E186ACBE9003E43AF /* Message.m in Sources */,
 				EA4CDB0818635199008FE822 /* MJRefreshHeaderView.m in Sources */,
 				EA4CDAFA18633892008FE822 /* ProfileController.m in Sources */,
+				EAB82D08186ACBE8003E43AF /* ChatMessage.m in Sources */,
 				EA4CDAF718633838008FE822 /* MessageController.m in Sources */,
 				EAE6335B1861F98C0072FED8 /* main.m in Sources */,
 				EA4CDB0618635199008FE822 /* MJRefreshBaseView.m in Sources */,
+				EACC9C7518668FF600BE2017 /* NSArray+Ext.m in Sources */,
+				EACC9C6A1865AC0700BE2017 /* MMFileManager.m in Sources */,
+				EAB82D1D186ACBE9003E43AF /* Location.m in Sources */,
 				EA4CDAEE18633795008FE822 /* MMTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACC9C7818672B7600BE2017 /* PinerModel.xcdatamodeld in Sources */,
 				EAE6337D1861F98C0072FED8 /* PinerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +744,7 @@
 		};
 		EAE633841861F98C0072FED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39235FE2AB44D82A3F86AD6 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Piner.app/Piner";
@@ -711,6 +816,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EACC63521865631500B6D186 /* PinerModel.xcdatamodel */,
+			);
+			currentVersion = EACC63521865631500B6D186 /* PinerModel.xcdatamodel */;
+			name = PinerModel.xcdatamodeld;
+			path = ../../../PinerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EAE633431861F98C0072FED8 /* Project object */;
 }
