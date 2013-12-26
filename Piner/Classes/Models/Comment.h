@@ -2,7 +2,7 @@
 //  Comment.h
 //  Piner
 //
-//  Created by Gamy on 13-12-25.
+//  Created by Gamy on 13-12-26.
 //  Copyright (c) 2013年 Piner. All rights reserved.
 //
 
@@ -14,8 +14,8 @@
 
 @interface Comment : Message
 
+@property (nonatomic, retain) Activity *activity;
 @property (nonatomic, retain) User *author;
 @property (nonatomic, retain) Comment *replyTarget;
-@property (nonatomic, retain) Activity *activity;
 
 @end

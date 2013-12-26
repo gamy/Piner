@@ -7,9 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "User.h"
-#import "Activity.h"
-
+#import "PinService.h"
 
 @implementation AppDelegate
 
@@ -17,6 +15,8 @@
 {
     NSLog(@"_prefix:set($file $line:<$method>) Config NSLog!");
     [[NLCoreData shared] setModelName:@"PinerModel"];
+    
+    [[PinService sharedService] signup:nil password:nil callback:NULL];
     
     return YES;
 }

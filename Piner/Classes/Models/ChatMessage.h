@@ -2,7 +2,7 @@
 //  ChatMessage.h
 //  Piner
 //
-//  Created by Gamy on 13-12-25.
+//  Created by Gamy on 13-12-26.
 //  Copyright (c) 2013年 Piner. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 
 @interface ChatMessage : Message
 
-@property (nonatomic, retain) User *sender;
 @property (nonatomic, retain) User *receiver;
+@property (nonatomic, retain) User *sender;
 
 @end

@@ -8,6 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		9CB240FD38514DC4A884EE61 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C0B45B30C94049A7AA6C12 /* libPods.a */; };
+		EA2B13C9186C12D500A2C065 /* PinAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13C8186C12D500A2C065 /* PinAPIClient.m */; };
+		EA2B13CA186C12D500A2C065 /* PinAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13C8186C12D500A2C065 /* PinAPIClient.m */; };
+		EA2B13CD186C138100A2C065 /* PinService.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13CC186C138100A2C065 /* PinService.m */; };
+		EA2B13CE186C138100A2C065 /* PinService.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13CC186C138100A2C065 /* PinService.m */; };
+		EA2B13D2186C221A00A2C065 /* PinService+Auth.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13D1186C221A00A2C065 /* PinService+Auth.m */; };
+		EA2B13D9186C237900A2C065 /* PinService+Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13D3186C237900A2C065 /* PinService+Activity.m */; };
+		EA2B13DA186C237900A2C065 /* PinService+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13D4186C237900A2C065 /* PinService+Badge.m */; };
+		EA2B13DB186C237900A2C065 /* PinService+Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13D5186C237900A2C065 /* PinService+Comment.m */; };
+		EA2B13DC186C237900A2C065 /* PinService+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13D6186C237900A2C065 /* PinService+Message.m */; };
+		EA2B13DD186C237900A2C065 /* PinService+Relation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13D7186C237900A2C065 /* PinService+Relation.m */; };
+		EA2B13DE186C237900A2C065 /* PinService+User.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13D8186C237900A2C065 /* PinService+User.m */; };
+		EA2B13E5186C329E00A2C065 /* PinError.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13E4186C329E00A2C065 /* PinError.m */; };
+		EA2B13E6186C329E00A2C065 /* PinError.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13E4186C329E00A2C065 /* PinError.m */; };
+		EA2B13E9186C360200A2C065 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13E8186C360200A2C065 /* Comment.m */; };
+		EA2B13EA186C360200A2C065 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13E8186C360200A2C065 /* Comment.m */; };
+		EA2B13ED186C360200A2C065 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13EC186C360200A2C065 /* Image.m */; };
+		EA2B13EE186C360200A2C065 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13EC186C360200A2C065 /* Image.m */; };
+		EA2B13F1186C360200A2C065 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13F0186C360200A2C065 /* User.m */; };
+		EA2B13F2186C360200A2C065 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13F0186C360200A2C065 /* User.m */; };
+		EA2B13F5186C360300A2C065 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13F4186C360300A2C065 /* Contact.m */; };
+		EA2B13F6186C360300A2C065 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13F4186C360300A2C065 /* Contact.m */; };
+		EA2B13F9186C360300A2C065 /* ChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13F8186C360300A2C065 /* ChatMessage.m */; };
+		EA2B13FA186C360300A2C065 /* ChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13F8186C360300A2C065 /* ChatMessage.m */; };
+		EA2B13FD186C360300A2C065 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13FC186C360300A2C065 /* Notice.m */; };
+		EA2B13FE186C360300A2C065 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13FC186C360300A2C065 /* Notice.m */; };
+		EA2B1401186C360300A2C065 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1400186C360300A2C065 /* Badge.m */; };
+		EA2B1402186C360300A2C065 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1400186C360300A2C065 /* Badge.m */; };
+		EA2B1405186C360300A2C065 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1404186C360300A2C065 /* Activity.m */; };
+		EA2B1406186C360300A2C065 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1404186C360300A2C065 /* Activity.m */; };
+		EA2B1409186C360300A2C065 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1408186C360300A2C065 /* Message.m */; };
+		EA2B140A186C360300A2C065 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1408186C360300A2C065 /* Message.m */; };
+		EA2B140D186C360300A2C065 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B140C186C360300A2C065 /* Sound.m */; };
+		EA2B140E186C360300A2C065 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B140C186C360300A2C065 /* Sound.m */; };
+		EA2B1411186C360300A2C065 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1410186C360300A2C065 /* Location.m */; };
+		EA2B1412186C360300A2C065 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1410186C360300A2C065 /* Location.m */; };
 		EA4CDAE818633741008FE822 /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDAE718633741008FE822 /* MMViewController.m */; };
 		EA4CDAEB1863375A008FE822 /* MMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDAEA1863375A008FE822 /* MMTableViewController.m */; };
 		EA4CDAEE18633795008FE822 /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDAED18633795008FE822 /* MMTableViewCell.m */; };
@@ -19,16 +54,6 @@
 		EA4CDB0618635199008FE822 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0018635199008FE822 /* MJRefreshBaseView.m */; };
 		EA4CDB0718635199008FE822 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0218635199008FE822 /* MJRefreshFooterView.m */; };
 		EA4CDB0818635199008FE822 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0418635199008FE822 /* MJRefreshHeaderView.m */; };
-		EAB82D08186ACBE8003E43AF /* ChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D07186ACBE8003E43AF /* ChatMessage.m */; };
-		EAB82D0B186ACBE9003E43AF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D0A186ACBE9003E43AF /* User.m */; };
-		EAB82D0E186ACBE9003E43AF /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D0D186ACBE9003E43AF /* Message.m */; };
-		EAB82D11186ACBE9003E43AF /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D10186ACBE9003E43AF /* Sound.m */; };
-		EAB82D14186ACBE9003E43AF /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D13186ACBE9003E43AF /* Contact.m */; };
-		EAB82D17186ACBE9003E43AF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D16186ACBE9003E43AF /* Activity.m */; };
-		EAB82D1A186ACBE9003E43AF /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D19186ACBE9003E43AF /* Comment.m */; };
-		EAB82D1D186ACBE9003E43AF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D1C186ACBE9003E43AF /* Location.m */; };
-		EAB82D20186ACBE9003E43AF /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D1F186ACBE9003E43AF /* Image.m */; };
-		EAB82D23186ACBE9003E43AF /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB82D22186ACBE9003E43AF /* Notice.m */; };
 		EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */; };
 		EACC9C6A1865AC0700BE2017 /* MMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC9C691865AC0700BE2017 /* MMFileManager.m */; };
 		EACC9C6E1865BD5F00BE2017 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC9C6D1865BD5F00BE2017 /* libPods.a */; };
@@ -63,6 +88,42 @@
 /* Begin PBXFileReference section */
 		02C0B45B30C94049A7AA6C12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39235FE2AB44D82A3F86AD6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EA2B13C7186C12D500A2C065 /* PinAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinAPIClient.h; sourceTree = "<group>"; };
+		EA2B13C8186C12D500A2C065 /* PinAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinAPIClient.m; sourceTree = "<group>"; };
+		EA2B13CB186C138100A2C065 /* PinService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinService.h; sourceTree = "<group>"; };
+		EA2B13CC186C138100A2C065 /* PinService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinService.m; sourceTree = "<group>"; };
+		EA2B13CF186C215300A2C065 /* PinModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinModels.h; sourceTree = "<group>"; };
+		EA2B13D1186C221A00A2C065 /* PinService+Auth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PinService+Auth.m"; sourceTree = "<group>"; };
+		EA2B13D3186C237900A2C065 /* PinService+Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PinService+Activity.m"; sourceTree = "<group>"; };
+		EA2B13D4186C237900A2C065 /* PinService+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PinService+Badge.m"; sourceTree = "<group>"; };
+		EA2B13D5186C237900A2C065 /* PinService+Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PinService+Comment.m"; sourceTree = "<group>"; };
+		EA2B13D6186C237900A2C065 /* PinService+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PinService+Message.m"; sourceTree = "<group>"; };
+		EA2B13D7186C237900A2C065 /* PinService+Relation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PinService+Relation.m"; sourceTree = "<group>"; };
+		EA2B13D8186C237900A2C065 /* PinService+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PinService+User.m"; sourceTree = "<group>"; };
+		EA2B13E3186C329E00A2C065 /* PinError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinError.h; sourceTree = "<group>"; };
+		EA2B13E4186C329E00A2C065 /* PinError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinError.m; sourceTree = "<group>"; };
+		EA2B13E7186C360200A2C065 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		EA2B13E8186C360200A2C065 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		EA2B13EB186C360200A2C065 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		EA2B13EC186C360200A2C065 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		EA2B13EF186C360200A2C065 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EA2B13F0186C360200A2C065 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		EA2B13F3186C360300A2C065 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		EA2B13F4186C360300A2C065 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		EA2B13F7186C360300A2C065 /* ChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessage.h; sourceTree = "<group>"; };
+		EA2B13F8186C360300A2C065 /* ChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessage.m; sourceTree = "<group>"; };
+		EA2B13FB186C360300A2C065 /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notice.h; sourceTree = "<group>"; };
+		EA2B13FC186C360300A2C065 /* Notice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notice.m; sourceTree = "<group>"; };
+		EA2B13FF186C360300A2C065 /* Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badge.h; sourceTree = "<group>"; };
+		EA2B1400186C360300A2C065 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
+		EA2B1403186C360300A2C065 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		EA2B1404186C360300A2C065 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		EA2B1407186C360300A2C065 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		EA2B1408186C360300A2C065 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		EA2B140B186C360300A2C065 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		EA2B140C186C360300A2C065 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		EA2B140F186C360300A2C065 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		EA2B1410186C360300A2C065 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		EA4CDAE618633741008FE822 /* MMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
 		EA4CDAE718633741008FE822 /* MMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
 		EA4CDAE91863375A008FE822 /* MMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewController.h; sourceTree = "<group>"; };
@@ -86,26 +147,6 @@
 		EA4CDB0218635199008FE822 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
 		EA4CDB0318635199008FE822 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
 		EA4CDB0418635199008FE822 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
-		EAB82D06186ACBE8003E43AF /* ChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessage.h; sourceTree = "<group>"; };
-		EAB82D07186ACBE8003E43AF /* ChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessage.m; sourceTree = "<group>"; };
-		EAB82D09186ACBE9003E43AF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		EAB82D0A186ACBE9003E43AF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		EAB82D0C186ACBE9003E43AF /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		EAB82D0D186ACBE9003E43AF /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		EAB82D0F186ACBE9003E43AF /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
-		EAB82D10186ACBE9003E43AF /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
-		EAB82D12186ACBE9003E43AF /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
-		EAB82D13186ACBE9003E43AF /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		EAB82D15186ACBE9003E43AF /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		EAB82D16186ACBE9003E43AF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
-		EAB82D18186ACBE9003E43AF /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
-		EAB82D19186ACBE9003E43AF /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
-		EAB82D1B186ACBE9003E43AF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		EAB82D1C186ACBE9003E43AF /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		EAB82D1E186ACBE9003E43AF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
-		EAB82D1F186ACBE9003E43AF /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
-		EAB82D21186ACBE9003E43AF /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notice.h; sourceTree = "<group>"; };
-		EAB82D22186ACBE9003E43AF /* Notice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notice.m; sourceTree = "<group>"; };
 		EACC63521865631500B6D186 /* PinerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinerModel.xcdatamodel; sourceTree = "<group>"; };
 		EACC9C681865AC0700BE2017 /* MMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFileManager.h; sourceTree = "<group>"; };
 		EACC9C691865AC0700BE2017 /* MMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFileManager.m; sourceTree = "<group>"; };
@@ -263,26 +304,29 @@
 			isa = PBXGroup;
 			children = (
 				EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */,
-				EAB82D21186ACBE9003E43AF /* Notice.h */,
-				EAB82D22186ACBE9003E43AF /* Notice.m */,
-				EAB82D1E186ACBE9003E43AF /* Image.h */,
-				EAB82D1F186ACBE9003E43AF /* Image.m */,
-				EAB82D1B186ACBE9003E43AF /* Location.h */,
-				EAB82D1C186ACBE9003E43AF /* Location.m */,
-				EAB82D18186ACBE9003E43AF /* Comment.h */,
-				EAB82D19186ACBE9003E43AF /* Comment.m */,
-				EAB82D15186ACBE9003E43AF /* Activity.h */,
-				EAB82D16186ACBE9003E43AF /* Activity.m */,
-				EAB82D12186ACBE9003E43AF /* Contact.h */,
-				EAB82D13186ACBE9003E43AF /* Contact.m */,
-				EAB82D0F186ACBE9003E43AF /* Sound.h */,
-				EAB82D10186ACBE9003E43AF /* Sound.m */,
-				EAB82D0C186ACBE9003E43AF /* Message.h */,
-				EAB82D0D186ACBE9003E43AF /* Message.m */,
-				EAB82D09186ACBE9003E43AF /* User.h */,
-				EAB82D0A186ACBE9003E43AF /* User.m */,
-				EAB82D06186ACBE8003E43AF /* ChatMessage.h */,
-				EAB82D07186ACBE8003E43AF /* ChatMessage.m */,
+				EA2B140F186C360300A2C065 /* Location.h */,
+				EA2B1410186C360300A2C065 /* Location.m */,
+				EA2B140B186C360300A2C065 /* Sound.h */,
+				EA2B140C186C360300A2C065 /* Sound.m */,
+				EA2B1407186C360300A2C065 /* Message.h */,
+				EA2B1408186C360300A2C065 /* Message.m */,
+				EA2B1403186C360300A2C065 /* Activity.h */,
+				EA2B1404186C360300A2C065 /* Activity.m */,
+				EA2B13FF186C360300A2C065 /* Badge.h */,
+				EA2B1400186C360300A2C065 /* Badge.m */,
+				EA2B13FB186C360300A2C065 /* Notice.h */,
+				EA2B13FC186C360300A2C065 /* Notice.m */,
+				EA2B13F7186C360300A2C065 /* ChatMessage.h */,
+				EA2B13F8186C360300A2C065 /* ChatMessage.m */,
+				EA2B13F3186C360300A2C065 /* Contact.h */,
+				EA2B13F4186C360300A2C065 /* Contact.m */,
+				EA2B13EF186C360200A2C065 /* User.h */,
+				EA2B13F0186C360200A2C065 /* User.m */,
+				EA2B13EB186C360200A2C065 /* Image.h */,
+				EA2B13EC186C360200A2C065 /* Image.m */,
+				EA2B13E7186C360200A2C065 /* Comment.h */,
+				EA2B13E8186C360200A2C065 /* Comment.m */,
+				EA2B13CF186C215300A2C065 /* PinModels.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,6 +334,19 @@
 		EA4CDAE318631295008FE822 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EA2B13C7186C12D500A2C065 /* PinAPIClient.h */,
+				EA2B13C8186C12D500A2C065 /* PinAPIClient.m */,
+				EA2B13CB186C138100A2C065 /* PinService.h */,
+				EA2B13CC186C138100A2C065 /* PinService.m */,
+				EA2B13D3186C237900A2C065 /* PinService+Activity.m */,
+				EA2B13D1186C221A00A2C065 /* PinService+Auth.m */,
+				EA2B13D4186C237900A2C065 /* PinService+Badge.m */,
+				EA2B13D5186C237900A2C065 /* PinService+Comment.m */,
+				EA2B13D6186C237900A2C065 /* PinService+Message.m */,
+				EA2B13D7186C237900A2C065 /* PinService+Relation.m */,
+				EA2B13D8186C237900A2C065 /* PinService+User.m */,
+				EA2B13E3186C329E00A2C065 /* PinError.h */,
+				EA2B13E4186C329E00A2C065 /* PinError.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -562,29 +619,40 @@
 			files = (
 				EA4CDB0718635199008FE822 /* MJRefreshFooterView.m in Sources */,
 				EA4CDAE818633741008FE822 /* MMViewController.m in Sources */,
-				EAB82D0B186ACBE9003E43AF /* User.m in Sources */,
-				EAB82D11186ACBE9003E43AF /* Sound.m in Sources */,
-				EAB82D20186ACBE9003E43AF /* Image.m in Sources */,
-				EAB82D17186ACBE9003E43AF /* Activity.m in Sources */,
-				EAB82D14186ACBE9003E43AF /* Contact.m in Sources */,
-				EAB82D1A186ACBE9003E43AF /* Comment.m in Sources */,
+				EA2B1405186C360300A2C065 /* Activity.m in Sources */,
+				EA2B140D186C360300A2C065 /* Sound.m in Sources */,
+				EA2B13E5186C329E00A2C065 /* PinError.m in Sources */,
+				EA2B13DE186C237900A2C065 /* PinService+User.m in Sources */,
+				EA2B13DA186C237900A2C065 /* PinService+Badge.m in Sources */,
+				EA2B13FD186C360300A2C065 /* Notice.m in Sources */,
+				EA2B13DB186C237900A2C065 /* PinService+Comment.m in Sources */,
+				EA2B13DD186C237900A2C065 /* PinService+Relation.m in Sources */,
+				EA2B13C9186C12D500A2C065 /* PinAPIClient.m in Sources */,
 				EA4CDAF418633804008FE822 /* ActivityController.m in Sources */,
+				EA2B13DC186C237900A2C065 /* PinService+Message.m in Sources */,
 				EACC9C7218668FA200BE2017 /* NSDictionary+Ext.m in Sources */,
 				EA4CDAF1186337E6008FE822 /* TimelineController.m in Sources */,
-				EAB82D23186ACBE9003E43AF /* Notice.m in Sources */,
 				EAE6335F1861F98C0072FED8 /* AppDelegate.m in Sources */,
+				EA2B13ED186C360200A2C065 /* Image.m in Sources */,
+				EA2B13D9186C237900A2C065 /* PinService+Activity.m in Sources */,
+				EA2B1409186C360300A2C065 /* Message.m in Sources */,
 				EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */,
 				EA4CDAEB1863375A008FE822 /* MMTableViewController.m in Sources */,
-				EAB82D0E186ACBE9003E43AF /* Message.m in Sources */,
+				EA2B13E9186C360200A2C065 /* Comment.m in Sources */,
 				EA4CDB0818635199008FE822 /* MJRefreshHeaderView.m in Sources */,
 				EA4CDAFA18633892008FE822 /* ProfileController.m in Sources */,
-				EAB82D08186ACBE8003E43AF /* ChatMessage.m in Sources */,
 				EA4CDAF718633838008FE822 /* MessageController.m in Sources */,
+				EA2B13D2186C221A00A2C065 /* PinService+Auth.m in Sources */,
+				EA2B13F5186C360300A2C065 /* Contact.m in Sources */,
 				EAE6335B1861F98C0072FED8 /* main.m in Sources */,
 				EA4CDB0618635199008FE822 /* MJRefreshBaseView.m in Sources */,
+				EA2B13F9186C360300A2C065 /* ChatMessage.m in Sources */,
+				EA2B1401186C360300A2C065 /* Badge.m in Sources */,
+				EA2B1411186C360300A2C065 /* Location.m in Sources */,
+				EA2B13F1186C360200A2C065 /* User.m in Sources */,
+				EA2B13CD186C138100A2C065 /* PinService.m in Sources */,
 				EACC9C7518668FF600BE2017 /* NSArray+Ext.m in Sources */,
 				EACC9C6A1865AC0700BE2017 /* MMFileManager.m in Sources */,
-				EAB82D1D186ACBE9003E43AF /* Location.m in Sources */,
 				EA4CDAEE18633795008FE822 /* MMTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,8 +661,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2B13F2186C360200A2C065 /* User.m in Sources */,
+				EA2B13E6186C329E00A2C065 /* PinError.m in Sources */,
+				EA2B13EA186C360200A2C065 /* Comment.m in Sources */,
+				EA2B140E186C360300A2C065 /* Sound.m in Sources */,
+				EA2B140A186C360300A2C065 /* Message.m in Sources */,
+				EA2B1406186C360300A2C065 /* Activity.m in Sources */,
+				EA2B13CA186C12D500A2C065 /* PinAPIClient.m in Sources */,
 				EACC9C7818672B7600BE2017 /* PinerModel.xcdatamodeld in Sources */,
 				EAE6337D1861F98C0072FED8 /* PinerTests.m in Sources */,
+				EA2B13CE186C138100A2C065 /* PinService.m in Sources */,
+				EA2B13FE186C360300A2C065 /* Notice.m in Sources */,
+				EA2B13F6186C360300A2C065 /* Contact.m in Sources */,
+				EA2B1402186C360300A2C065 /* Badge.m in Sources */,
+				EA2B13EE186C360200A2C065 /* Image.m in Sources */,
+				EA2B1412186C360300A2C065 /* Location.m in Sources */,
+				EA2B13FA186C360300A2C065 /* ChatMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  Notice.h
+//  PinError.h
 //  Piner
 //
 //  Created by Gamy on 13-12-26.
@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
-#import "Message.h"
 
+@interface PinError : NSObject
 
-@interface Notice : Message
-
++ (NSError *)errorWithCode:(NSInteger)code message:(NSString *)message;
 
 @end

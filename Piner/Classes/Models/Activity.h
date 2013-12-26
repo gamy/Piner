@@ -2,7 +2,7 @@
 //  Activity.h
 //  Piner
 //
-//  Created by Gamy on 13-12-25.
+//  Created by Gamy on 13-12-26.
 //  Copyright (c) 2013年 Piner. All rights reserved.
 //
 
@@ -14,21 +14,26 @@
 @interface Activity : NSManagedObject
 
 @property (nonatomic, retain) NSString * desc;
+@property (nonatomic, retain) NSString * image;
+@property (nonatomic, retain) NSNumber * joinCount;
+@property (nonatomic, retain) NSNumber * maxNumber;
 @property (nonatomic, retain) NSString * oId;
 @property (nonatomic, retain) NSNumber * shopId;
 @property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * type;
-@property (nonatomic, retain) NSNumber * joinCount;
-@property (nonatomic, retain) NSString * image;
-@property (nonatomic, retain) NSNumber * maxNumber;
+@property (nonatomic, retain) NSSet *comments;
 @property (nonatomic, retain) NSOrderedSet *guests;
 @property (nonatomic, retain) User *host;
 @property (nonatomic, retain) NSSet *images;
-@property (nonatomic, retain) NSSet *comments;
 @property (nonatomic, retain) Location *location;
 @end
 
 @interface Activity (CoreDataGeneratedAccessors)
+
+- (void)addCommentsObject:(Comment *)value;
+- (void)removeCommentsObject:(Comment *)value;
+- (void)addComments:(NSSet *)values;
+- (void)removeComments:(NSSet *)values;
 
 - (void)insertObject:(User *)value inGuestsAtIndex:(NSUInteger)idx;
 - (void)removeObjectFromGuestsAtIndex:(NSUInteger)idx;
@@ -44,10 +49,5 @@
 - (void)removeImagesObject:(Image *)value;
 - (void)addImages:(NSSet *)values;
 - (void)removeImages:(NSSet *)values;
-
-- (void)addCommentsObject:(Comment *)value;
-- (void)removeCommentsObject:(Comment *)value;
-- (void)addComments:(NSSet *)values;
-- (void)removeComments:(NSSet *)values;
 
 @end

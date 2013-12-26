@@ -2,14 +2,14 @@
 //  User.h
 //  Piner
 //
-//  Created by Gamy on 13-12-25.
+//  Created by Gamy on 13-12-26.
 //  Copyright (c) 2013年 Piner. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Activity, Comment, Location, User;
+@class Activity, Comment, Contact, Location, User;
 
 @interface User : NSManagedObject
 
@@ -18,25 +18,25 @@
 @property (nonatomic, retain) NSNumber * fanCount;
 @property (nonatomic, retain) NSNumber * followCount;
 @property (nonatomic, retain) NSNumber * gender;
+@property (nonatomic, retain) NSNumber * hostActivityCount;
+@property (nonatomic, retain) NSString * introduce;
+@property (nonatomic, retain) NSNumber * isLocalAccount;
+@property (nonatomic, retain) NSNumber * joinActivityCount;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * nick;
 @property (nonatomic, retain) NSString * oid;
+@property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSNumber * role;
 @property (nonatomic, retain) NSString * signature;
 @property (nonatomic, retain) NSDate * signupDate;
-@property (nonatomic, retain) NSNumber * isLocalAccount;
-@property (nonatomic, retain) NSNumber * joinActivityCount;
-@property (nonatomic, retain) NSNumber * hostActivityCount;
-@property (nonatomic, retain) NSString * password;
-@property (nonatomic, retain) NSString * introduce;
+@property (nonatomic, retain) Contact *contact;
 @property (nonatomic, retain) NSOrderedSet *fans;
 @property (nonatomic, retain) NSOrderedSet *followers;
 @property (nonatomic, retain) NSOrderedSet *hostedActivities;
 @property (nonatomic, retain) NSOrderedSet *joinedActivities;
-@property (nonatomic, retain) NSOrderedSet *sentComments;
-@property (nonatomic, retain) Comment *receivedComments;
 @property (nonatomic, retain) Location *location;
-@property (nonatomic, retain) NSManagedObject *contact;
+@property (nonatomic, retain) Comment *receivedComments;
+@property (nonatomic, retain) NSOrderedSet *sentComments;
 @end
 
 @interface User (CoreDataGeneratedAccessors)
