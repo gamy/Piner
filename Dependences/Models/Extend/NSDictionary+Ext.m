@@ -22,4 +22,9 @@
         block(key, value);
     }
 }
+
++ (BOOL)isDictionary:(id)obj
+{
+    return [obj isKindOfClass:[NSDictionary class]];
+}
 @end

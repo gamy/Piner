@@ -50,10 +50,14 @@
 		EA4CDAF418633804008FE822 /* ActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDAF318633804008FE822 /* ActivityController.m */; };
 		EA4CDAF718633838008FE822 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDAF618633838008FE822 /* MessageController.m */; };
 		EA4CDAFA18633892008FE822 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDAF918633892008FE822 /* ProfileController.m */; };
-		EA4CDB0518635199008FE822 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA4CDAFD18635199008FE822 /* MJRefresh.bundle */; };
-		EA4CDB0618635199008FE822 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0018635199008FE822 /* MJRefreshBaseView.m */; };
-		EA4CDB0718635199008FE822 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0218635199008FE822 /* MJRefreshFooterView.m */; };
-		EA4CDB0818635199008FE822 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CDB0418635199008FE822 /* MJRefreshHeaderView.m */; };
+		EA663577186F0EF900336C57 /* MMActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA663576186F0EF900336C57 /* MMActivityView.m */; };
+		EA66357B186F131F00336C57 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66357A186F131F00336C57 /* UIView+Ext.m */; };
+		EA66358018702BAB00336C57 /* SignController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66357E18702BAB00336C57 /* SignController.m */; };
+		EA66358118702BAB00336C57 /* SignController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA66357F18702BAB00336C57 /* SignController.xib */; };
+		EA66358E18704D6800336C57 /* UIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66358D18704D6800336C57 /* UIFactory.m */; };
+		EA6635921870546100336C57 /* NSString+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6635911870546100336C57 /* NSString+Validate.m */; };
+		EA6635961870632D00336C57 /* LeoLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6635951870632D00336C57 /* LeoLoadingView.m */; };
+		EA66359A18706C5A00336C57 /* MMPopMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66359918706C5A00336C57 /* MMPopMessageView.m */; };
 		EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */; };
 		EACC9C6A1865AC0700BE2017 /* MMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC9C691865AC0700BE2017 /* MMFileManager.m */; };
 		EACC9C6E1865BD5F00BE2017 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC9C6D1865BD5F00BE2017 /* libPods.a */; };
@@ -139,14 +143,21 @@
 		EA4CDAF818633892008FE822 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
 		EA4CDAF918633892008FE822 /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
 		EA4CDAFB18633F4C008FE822 /* LogUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogUtil.h; sourceTree = "<group>"; };
-		EA4CDAFD18635199008FE822 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
-		EA4CDAFE18635199008FE822 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
-		EA4CDAFF18635199008FE822 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
-		EA4CDB0018635199008FE822 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
-		EA4CDB0118635199008FE822 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
-		EA4CDB0218635199008FE822 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
-		EA4CDB0318635199008FE822 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
-		EA4CDB0418635199008FE822 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		EA663575186F0EF900336C57 /* MMActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMActivityView.h; sourceTree = "<group>"; };
+		EA663576186F0EF900336C57 /* MMActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMActivityView.m; sourceTree = "<group>"; };
+		EA663579186F131F00336C57 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
+		EA66357A186F131F00336C57 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
+		EA66357D18702BAB00336C57 /* SignController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignController.h; sourceTree = "<group>"; };
+		EA66357E18702BAB00336C57 /* SignController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignController.m; sourceTree = "<group>"; };
+		EA66357F18702BAB00336C57 /* SignController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignController.xib; sourceTree = "<group>"; };
+		EA66358C18704D6800336C57 /* UIFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFactory.h; sourceTree = "<group>"; };
+		EA66358D18704D6800336C57 /* UIFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFactory.m; sourceTree = "<group>"; };
+		EA6635901870546100336C57 /* NSString+Validate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validate.h"; sourceTree = "<group>"; };
+		EA6635911870546100336C57 /* NSString+Validate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validate.m"; sourceTree = "<group>"; };
+		EA6635941870632D00336C57 /* LeoLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeoLoadingView.h; sourceTree = "<group>"; };
+		EA6635951870632D00336C57 /* LeoLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeoLoadingView.m; sourceTree = "<group>"; };
+		EA66359818706C5A00336C57 /* MMPopMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPopMessageView.h; sourceTree = "<group>"; };
+		EA66359918706C5A00336C57 /* MMPopMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPopMessageView.m; sourceTree = "<group>"; };
 		EACC63521865631500B6D186 /* PinerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinerModel.xcdatamodel; sourceTree = "<group>"; };
 		EACC9C681865AC0700BE2017 /* MMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFileManager.h; sourceTree = "<group>"; };
 		EACC9C691865AC0700BE2017 /* MMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFileManager.m; sourceTree = "<group>"; };
@@ -268,7 +279,10 @@
 		EA4CDADF18631284008FE822 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EA4CDAFC18635199008FE822 /* MJRefresh */,
+				EA66359718706C2F00336C57 /* MMPopMessageView */,
+				EA6635931870632D00336C57 /* LHLoadingView */,
+				EA663578186F130B00336C57 /* ViewExtend */,
+				EA663574186F0EDD00336C57 /* MMActivityView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +290,7 @@
 		EA4CDAE018631295008FE822 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EA66358F1870544B00336C57 /* Utils */,
 				EA4CDAE118631295008FE822 /* Controllers */,
 				EA4CDAE218631295008FE822 /* Models */,
 				EA4CDAE318631295008FE822 /* Services */,
@@ -288,14 +303,8 @@
 		EA4CDAE118631295008FE822 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA4CDAEF186337E6008FE822 /* TimelineController.h */,
-				EA4CDAF0186337E6008FE822 /* TimelineController.m */,
-				EA4CDAF218633804008FE822 /* ActivityController.h */,
-				EA4CDAF318633804008FE822 /* ActivityController.m */,
-				EA4CDAF518633838008FE822 /* MessageController.h */,
-				EA4CDAF618633838008FE822 /* MessageController.m */,
-				EA4CDAF818633892008FE822 /* ProfileController.h */,
-				EA4CDAF918633892008FE822 /* ProfileController.m */,
+				EA66358318702BD000336C57 /* Sign */,
+				EA66358218702BBC00336C57 /* Tabs */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,23 +370,81 @@
 		EA4CDAE518631295008FE822 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA66358C18704D6800336C57 /* UIFactory.h */,
+				EA66358D18704D6800336C57 /* UIFactory.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EA4CDAFC18635199008FE822 /* MJRefresh */ = {
+		EA663574186F0EDD00336C57 /* MMActivityView */ = {
 			isa = PBXGroup;
 			children = (
-				EA4CDAFD18635199008FE822 /* MJRefresh.bundle */,
-				EA4CDAFE18635199008FE822 /* MJRefresh.h */,
-				EA4CDAFF18635199008FE822 /* MJRefreshBaseView.h */,
-				EA4CDB0018635199008FE822 /* MJRefreshBaseView.m */,
-				EA4CDB0118635199008FE822 /* MJRefreshFooterView.h */,
-				EA4CDB0218635199008FE822 /* MJRefreshFooterView.m */,
-				EA4CDB0318635199008FE822 /* MJRefreshHeaderView.h */,
-				EA4CDB0418635199008FE822 /* MJRefreshHeaderView.m */,
+				EA663575186F0EF900336C57 /* MMActivityView.h */,
+				EA663576186F0EF900336C57 /* MMActivityView.m */,
 			);
-			path = MJRefresh;
+			path = MMActivityView;
+			sourceTree = "<group>";
+		};
+		EA663578186F130B00336C57 /* ViewExtend */ = {
+			isa = PBXGroup;
+			children = (
+				EA663579186F131F00336C57 /* UIView+Ext.h */,
+				EA66357A186F131F00336C57 /* UIView+Ext.m */,
+			);
+			name = ViewExtend;
+			path = ViewCategory;
+			sourceTree = "<group>";
+		};
+		EA66358218702BBC00336C57 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				EA4CDAEF186337E6008FE822 /* TimelineController.h */,
+				EA4CDAF0186337E6008FE822 /* TimelineController.m */,
+				EA4CDAF218633804008FE822 /* ActivityController.h */,
+				EA4CDAF318633804008FE822 /* ActivityController.m */,
+				EA4CDAF518633838008FE822 /* MessageController.h */,
+				EA4CDAF618633838008FE822 /* MessageController.m */,
+				EA4CDAF818633892008FE822 /* ProfileController.h */,
+				EA4CDAF918633892008FE822 /* ProfileController.m */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		EA66358318702BD000336C57 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				EA66357D18702BAB00336C57 /* SignController.h */,
+				EA66357E18702BAB00336C57 /* SignController.m */,
+				EA66357F18702BAB00336C57 /* SignController.xib */,
+			);
+			name = Sign;
+			sourceTree = "<group>";
+		};
+		EA66358F1870544B00336C57 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA6635901870546100336C57 /* NSString+Validate.h */,
+				EA6635911870546100336C57 /* NSString+Validate.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EA6635931870632D00336C57 /* LHLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				EA6635941870632D00336C57 /* LeoLoadingView.h */,
+				EA6635951870632D00336C57 /* LeoLoadingView.m */,
+			);
+			path = LHLoadingView;
+			sourceTree = "<group>";
+		};
+		EA66359718706C2F00336C57 /* MMPopMessageView */ = {
+			isa = PBXGroup;
+			children = (
+				EA66359818706C5A00336C57 /* MMPopMessageView.h */,
+				EA66359918706C5A00336C57 /* MMPopMessageView.m */,
+			);
+			path = MMPopMessageView;
 			sourceTree = "<group>";
 		};
 		EACC63501865625300B6D186 /* Resource */ = {
@@ -533,6 +600,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Piner;
 				TargetAttributes = {
+					EAE6334A1861F98C0072FED8 = {
+						DevelopmentTeam = LPN7A567X3;
+					};
 					EAE6336E1861F98C0072FED8 = {
 						TestTargetID = EAE6334A1861F98C0072FED8;
 					};
@@ -562,9 +632,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA66358118702BAB00336C57 /* SignController.xib in Resources */,
 				EAE6336A1861F98C0072FED8 /* Images.xcassets in Resources */,
 				EAE633591861F98C0072FED8 /* InfoPlist.strings in Resources */,
-				EA4CDB0518635199008FE822 /* MJRefresh.bundle in Resources */,
 				EAE633621861F98C0072FED8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,7 +687,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA4CDB0718635199008FE822 /* MJRefreshFooterView.m in Sources */,
 				EA4CDAE818633741008FE822 /* MMViewController.m in Sources */,
 				EA2B1405186C360300A2C065 /* Activity.m in Sources */,
 				EA2B140D186C360300A2C065 /* Sound.m in Sources */,
@@ -625,11 +694,14 @@
 				EA2B13DE186C237900A2C065 /* PinService+User.m in Sources */,
 				EA2B13DA186C237900A2C065 /* PinService+Badge.m in Sources */,
 				EA2B13FD186C360300A2C065 /* Notice.m in Sources */,
+				EA663577186F0EF900336C57 /* MMActivityView.m in Sources */,
+				EA66357B186F131F00336C57 /* UIView+Ext.m in Sources */,
 				EA2B13DB186C237900A2C065 /* PinService+Comment.m in Sources */,
 				EA2B13DD186C237900A2C065 /* PinService+Relation.m in Sources */,
 				EA2B13C9186C12D500A2C065 /* PinAPIClient.m in Sources */,
 				EA4CDAF418633804008FE822 /* ActivityController.m in Sources */,
 				EA2B13DC186C237900A2C065 /* PinService+Message.m in Sources */,
+				EA66358E18704D6800336C57 /* UIFactory.m in Sources */,
 				EACC9C7218668FA200BE2017 /* NSDictionary+Ext.m in Sources */,
 				EA4CDAF1186337E6008FE822 /* TimelineController.m in Sources */,
 				EAE6335F1861F98C0072FED8 /* AppDelegate.m in Sources */,
@@ -637,23 +709,25 @@
 				EA2B13D9186C237900A2C065 /* PinService+Activity.m in Sources */,
 				EA2B1409186C360300A2C065 /* Message.m in Sources */,
 				EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */,
+				EA6635921870546100336C57 /* NSString+Validate.m in Sources */,
 				EA4CDAEB1863375A008FE822 /* MMTableViewController.m in Sources */,
 				EA2B13E9186C360200A2C065 /* Comment.m in Sources */,
-				EA4CDB0818635199008FE822 /* MJRefreshHeaderView.m in Sources */,
 				EA4CDAFA18633892008FE822 /* ProfileController.m in Sources */,
 				EA4CDAF718633838008FE822 /* MessageController.m in Sources */,
 				EA2B13D2186C221A00A2C065 /* PinService+Auth.m in Sources */,
 				EA2B13F5186C360300A2C065 /* Contact.m in Sources */,
 				EAE6335B1861F98C0072FED8 /* main.m in Sources */,
-				EA4CDB0618635199008FE822 /* MJRefreshBaseView.m in Sources */,
 				EA2B13F9186C360300A2C065 /* ChatMessage.m in Sources */,
 				EA2B1401186C360300A2C065 /* Badge.m in Sources */,
 				EA2B1411186C360300A2C065 /* Location.m in Sources */,
+				EA66359A18706C5A00336C57 /* MMPopMessageView.m in Sources */,
 				EA2B13F1186C360200A2C065 /* User.m in Sources */,
 				EA2B13CD186C138100A2C065 /* PinService.m in Sources */,
 				EACC9C7518668FF600BE2017 /* NSArray+Ext.m in Sources */,
+				EA6635961870632D00336C57 /* LeoLoadingView.m in Sources */,
 				EACC9C6A1865AC0700BE2017 /* MMFileManager.m in Sources */,
 				EA4CDAEE18633795008FE822 /* MMTableViewCell.m in Sources */,
+				EA66358018702BAB00336C57 /* SignController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +827,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -785,6 +860,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

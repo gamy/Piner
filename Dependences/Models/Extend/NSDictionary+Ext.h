@@ -11,5 +11,6 @@
 @interface NSDictionary(Ext)
 
 - (void)enumerate:(void (^)(id key, id value))block;
++ (BOOL)isDictionary:(id)obj;
 
 @end

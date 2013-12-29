@@ -35,7 +35,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pby-Gi-fKB">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pby-Gi-fKB" id="ZDx-ZA-JpX">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -43,7 +43,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9xb-eo-J2h">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9xb-eo-J2h" id="Oxr-nU-GYr">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -51,7 +51,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="b0u-dU-lFt">
-                                <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="174" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b0u-dU-lFt" id="qiK-Ji-chP">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -169,11 +169,16 @@
         <!--Navigation Controller - 动态-->
         <scene sceneID="M0j-aE-DLl">
             <objects>
-                <navigationController title="动态" definesPresentationContext="YES" navigationBarHidden="YES" id="zCi-qZ-qbb" sceneMemberID="viewController">
+                <navigationController title="动态" definesPresentationContext="YES" id="zCi-qZ-qbb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="动态" id="Jr1-4E-HPB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uGm-OT-ZOl">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gUw-4k-6pN">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="1aH-BL-p6n" kind="relationship" relationship="rootViewController" id="OTe-uB-hyz"/>
                     </connections>
@@ -192,7 +197,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aNk-MF-EBt">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aNk-MF-EBt" id="Uid-3D-LZ3">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -210,7 +215,7 @@
         <!--Navigation Controller - 我-->
         <scene sceneID="xlg-BZ-OL1">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="rNR-4p-jEI" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="rNR-4p-jEI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" id="PdU-Aw-IZJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gYz-JJ-VUd">
                         <autoresizingMask key="autoresizingMask"/>

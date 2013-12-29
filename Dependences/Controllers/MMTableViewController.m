@@ -7,11 +7,14 @@
 //
 
 #import "MMTableViewController.h"
+#import "MMActivityView.h"
+#import "LeoLoadingView.h"
 
 @interface MMTableViewController ()
 
-@property(nonatomic, weak)MJRefreshFooterView *refreshFooter;
-
+@property(nonatomic, weak) MMActivityView *loadingView;
+@property(nonatomic, weak) LeoLoadingView *lhLoadingView;
+@property(nonatomic, assign) BOOL useLHLoadingView;
 @end
 
 @implementation MMTableViewController
@@ -30,20 +33,18 @@
 - (void)setupRefreshViews
 {
     self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(startToReloadData) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl addTarget:self action:@selector(startToReloadData:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl.attributedTitle = nil;
     
-    self.refreshFooter = [MJRefreshFooterView footer];
-    [self.refreshFooter setScrollView:self.tableView];
-    self.refreshFooter.delegate = self;
 }
+
+
 
 - (void)viewDidLoad
 {
+    self.useLHLoadingView = YES;
     [super viewDidLoad];
     [self setupRefreshViews];
-//    [self beginRefreshing];
-//    [self performSelector:@selector(beginRefreshing) withObject:nil afterDelay:2];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,94 +83,107 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
-
-#pragma mark 代理方法-进入刷新状态就会调用
-- (void)refreshViewBeginRefreshing:(MJRefreshBaseView *)refreshView
-{
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"加载数据中..."];
-    [self startToLoadMoreData];
-}
-
-- (void)beginRefreshing
-{
-//    [self.refreshControl beginRefreshing];
-//    [self startToReloadData];
-//    [self.refreshControl sendActionsForControlEvents:UIControlEventValueChanged];
-}
+//load data
 
 - (void)startToReloadData:(id)refreshControl
 {
-    [self startToReloadData];
+    if (!self.isLoading) {
+        [[self refreshControl] beginRefreshing];
+        _loading = YES;
+        [self startToReloadData];
+    }else{
+        [self.refreshControl endRefreshing];
+        NSLog(@"isLoading, Can't start to load data.");
+    }
 }
 
 - (void)startToReloadData
 {
+    NSLog(@"show Activity for reload data!!");
+    [self showActivityWithText:@"加载中..."];
     NSLog(@"startToReloadData");
-    [self performSelector:@selector(finishReloadData) withObject:nil afterDelay:2];
 }
 - (void)finishReloadData
 {
+    [self endActivity];
+    NSLog(@"finishReloadData");
     [self.refreshControl endRefreshing];
     self.refreshControl.attributedTitle = nil;
+    _loading = NO;
 }
 
 - (void)startToLoadMoreData
 {
-    [self performSelector:@selector(finishLoadMoreData) withObject:nil afterDelay:2];
+    NSLog(@"show Activity for load more data!!");
+    [self showActivityWithText:@"加载中..."];
+    NSLog(@"<startToLoadMoreData>");
 }
 - (void)finishLoadMoreData
 {
-    [self.refreshFooter endRefreshing];
+    [self endActivity];
+    NSLog(@"finishLoadMoreData");
+    _loading = NO;
 }
+
+- (void)startRefreshing
+{
+    [self.refreshControl beginRefreshing];
+    [self.refreshControl sendActionsForControlEvents:UIControlEventValueChanged];
+    [self.tableView setContentOffset:CGPointMake(0, -75) animated:YES];
+}
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (decelerate) {
+        if ((scrollView.contentOffset.y + CGRectGetHeight(scrollView.frame)) >= scrollView.contentSize.height && !self.isLoading){
+            _loading = YES;
+            [self startToLoadMoreData];
+        }
+    }
+}
+
+
+//activity
+
+- (void)showActivityWithText:(NSString *)text
+{
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    if (self.useLHLoadingView) {
+        LeoLoadingView *ll = self.lhLoadingView;
+        if (ll == nil) {
+            ll = [[LeoLoadingView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+            self.lhLoadingView = ll;
+        }
+        [keyWindow addSubview:ll];
+        ll.center = keyWindow.center;
+        [ll showView:YES];
+    }else{
+        MMActivityView *ai = self.loadingView;
+        if (self.loadingView == nil) {
+            ai = [MMActivityView activityView];
+            self.loadingView = ai;
+        }
+        [self.loadingView setText:text];
+        self.loadingView.hasMask = YES;
+        [self.loadingView showInView:keyWindow];
+        [self.loadingView updateCenterY:180];
+    }
+}
+
+- (void)showActivity
+{
+    [self showActivityWithText:nil];
+}
+
+- (void)endActivity
+{
+    if (self.useLHLoadingView) {
+        [self.lhLoadingView showView:NO];
+    }else{
+        [self.loadingView dismiss];
+    }
+}
+
 
 @end

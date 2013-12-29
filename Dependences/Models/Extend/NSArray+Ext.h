@@ -16,4 +16,6 @@ typedef void (^EnumValueBlock)(id value);
 - (void)enumerate:(EnumValueBlock) block;
 - (void)reverseEnumerate:(EnumValueBlock) block;
 
+
++ (BOOL)isArray:(id)obj;
 @end

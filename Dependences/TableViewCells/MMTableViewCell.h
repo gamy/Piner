@@ -9,5 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @interface MMTableViewCell : UITableViewCell
+{
+    @protected
+        id _item;
+}
+@property(nonatomic, weak)id delegate;
+@property(nonatomic, strong)NSIndexPath *indexPath;
+
+- (id)item;
+- (void)updateWithItem:(id)item;
+
+
+//To be override.
++ (instancetype)cell;
++ (CGFloat)heightForItem:(id)item;
++ (NSString *)identifier;
+- (void)layoutSubviews;
 
 @end

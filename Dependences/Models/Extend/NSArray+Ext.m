@@ -32,4 +32,8 @@
 
 }
 
++ (BOOL)isArray:(id)obj
+{
+    return [obj isKindOfClass:[NSArray class]];
+}
 @end

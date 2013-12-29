@@ -9,7 +9,9 @@
 #import "TimelineController.h"
 
 @interface TimelineController ()
-
+{
+    NSInteger rowCount;
+}
 @end
 
 @implementation TimelineController
@@ -19,20 +21,61 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        rowCount = 10;
     }
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    rowCount = 10;
+    [self startRefreshing];
+    [SignController presentFromController:self];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return rowCount;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [SignController presentFromController:self];
+}
+
+
+- (void)finishReloadData
+{
+    rowCount = 10;
+    [super finishReloadData];
+    [self.tableView reloadData];
+}
+
+- (void)finishLoadMoreData
+{
+    rowCount += 10;
+    [super finishLoadMoreData];
+    [self.tableView reloadData];
+}
+
+- (void)startToReloadData
+{
+    [super startToReloadData];
+    [self performSelector:@selector(finishReloadData) withObject:nil afterDelay:2];
+}
+
+- (void)startToLoadMoreData
+{
+    [super startToLoadMoreData];
+    [self performSelector:@selector(finishLoadMoreData) withObject:nil afterDelay:2];
 }
 
 @end

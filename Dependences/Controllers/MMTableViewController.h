@@ -7,23 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MJRefresh.h"
+#import "UIView+Ext.h"
 
 //typedef void(^ LoadDataCallback) (NSError *error, id data);
 
-@interface MMTableViewController : UITableViewController<MJRefreshBaseViewDelegate>
+@interface MMTableViewController : UITableViewController
 
+
+@property(assign, nonatomic, readonly, getter = isLoading) BOOL loading;
 
 //call to refresh the data.
-- (void)beginRefreshing;
+- (void)startRefreshing;
 
-//TODO should be override.
+// should be override.
 - (void)startToReloadData;
-- (void)finishReloadData;
 
 - (void)startToLoadMoreData;
-- (void)finishLoadMoreData;
 
+// called by sub classes
+- (void)finishLoadMoreData;
+- (void)finishReloadData;
+
+- (void)showActivityWithText:(NSString *)text;
+- (void)showActivity;
+- (void)endActivity;
 
 
 @end
