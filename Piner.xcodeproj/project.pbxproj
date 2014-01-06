@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9CB240FD38514DC4A884EE61 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C0B45B30C94049A7AA6C12 /* libPods.a */; };
+		EA0D9926187B003600777AAC /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D9925187B003600777AAC /* ActivityCell.m */; };
+		EA0D9928187B004A00777AAC /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0D9927187B004A00777AAC /* ActivityCell.xib */; };
+		EA0D992B187B0E2E00777AAC /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D992A187B0E2E00777AAC /* UIUtil.m */; };
+		EA0D992E187B118200777AAC /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D992D187B118200777AAC /* NSString+Ext.m */; };
+		EA0D9931187B12F600777AAC /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D9930187B12F600777AAC /* ModelManager.m */; };
+		EA0D9934187B15AB00777AAC /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D9933187B15AB00777AAC /* Activity.m */; };
+		EA0D9937187B240700777AAC /* CGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D9936187B240700777AAC /* CGUtil.m */; };
 		EA2B13C9186C12D500A2C065 /* PinAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13C8186C12D500A2C065 /* PinAPIClient.m */; };
 		EA2B13CA186C12D500A2C065 /* PinAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13C8186C12D500A2C065 /* PinAPIClient.m */; };
 		EA2B13CD186C138100A2C065 /* PinService.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13CC186C138100A2C065 /* PinService.m */; };
@@ -35,8 +42,6 @@
 		EA2B13FE186C360300A2C065 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13FC186C360300A2C065 /* Notice.m */; };
 		EA2B1401186C360300A2C065 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1400186C360300A2C065 /* Badge.m */; };
 		EA2B1402186C360300A2C065 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1400186C360300A2C065 /* Badge.m */; };
-		EA2B1405186C360300A2C065 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1404186C360300A2C065 /* Activity.m */; };
-		EA2B1406186C360300A2C065 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1404186C360300A2C065 /* Activity.m */; };
 		EA2B1409186C360300A2C065 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1408186C360300A2C065 /* Message.m */; };
 		EA2B140A186C360300A2C065 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B1408186C360300A2C065 /* Message.m */; };
 		EA2B140D186C360300A2C065 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B140C186C360300A2C065 /* Sound.m */; };
@@ -92,6 +97,19 @@
 /* Begin PBXFileReference section */
 		02C0B45B30C94049A7AA6C12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39235FE2AB44D82A3F86AD6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EA0D9924187B003600777AAC /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
+		EA0D9925187B003600777AAC /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
+		EA0D9927187B004A00777AAC /* ActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
+		EA0D9929187B0E2E00777AAC /* UIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
+		EA0D992A187B0E2E00777AAC /* UIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
+		EA0D992C187B118200777AAC /* NSString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
+		EA0D992D187B118200777AAC /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
+		EA0D992F187B12F600777AAC /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		EA0D9930187B12F600777AAC /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
+		EA0D9932187B15AB00777AAC /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		EA0D9933187B15AB00777AAC /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		EA0D9935187B240700777AAC /* CGUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUtil.h; sourceTree = "<group>"; };
+		EA0D9936187B240700777AAC /* CGUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUtil.m; sourceTree = "<group>"; };
 		EA2B13C7186C12D500A2C065 /* PinAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinAPIClient.h; sourceTree = "<group>"; };
 		EA2B13C8186C12D500A2C065 /* PinAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinAPIClient.m; sourceTree = "<group>"; };
 		EA2B13CB186C138100A2C065 /* PinService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinService.h; sourceTree = "<group>"; };
@@ -120,8 +138,6 @@
 		EA2B13FC186C360300A2C065 /* Notice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notice.m; sourceTree = "<group>"; };
 		EA2B13FF186C360300A2C065 /* Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badge.h; sourceTree = "<group>"; };
 		EA2B1400186C360300A2C065 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
-		EA2B1403186C360300A2C065 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		EA2B1404186C360300A2C065 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		EA2B1407186C360300A2C065 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		EA2B1408186C360300A2C065 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		EA2B140B186C360300A2C065 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
@@ -272,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				EA4CDAFB18633F4C008FE822 /* LogUtil.h */,
+				EA0D9935187B240700777AAC /* CGUtil.h */,
+				EA0D9936187B240700777AAC /* CGUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -313,14 +331,14 @@
 			isa = PBXGroup;
 			children = (
 				EACC63511865631500B6D186 /* PinerModel.xcdatamodeld */,
+				EA0D9932187B15AB00777AAC /* Activity.h */,
+				EA0D9933187B15AB00777AAC /* Activity.m */,
 				EA2B140F186C360300A2C065 /* Location.h */,
 				EA2B1410186C360300A2C065 /* Location.m */,
 				EA2B140B186C360300A2C065 /* Sound.h */,
 				EA2B140C186C360300A2C065 /* Sound.m */,
 				EA2B1407186C360300A2C065 /* Message.h */,
 				EA2B1408186C360300A2C065 /* Message.m */,
-				EA2B1403186C360300A2C065 /* Activity.h */,
-				EA2B1404186C360300A2C065 /* Activity.m */,
 				EA2B13FF186C360300A2C065 /* Badge.h */,
 				EA2B1400186C360300A2C065 /* Badge.m */,
 				EA2B13FB186C360300A2C065 /* Notice.h */,
@@ -336,6 +354,8 @@
 				EA2B13E7186C360200A2C065 /* Comment.h */,
 				EA2B13E8186C360200A2C065 /* Comment.m */,
 				EA2B13CF186C215300A2C065 /* PinModels.h */,
+				EA0D992F187B12F600777AAC /* ModelManager.h */,
+				EA0D9930187B12F600777AAC /* ModelManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +383,9 @@
 		EA4CDAE418631295008FE822 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				EA0D9924187B003600777AAC /* ActivityCell.h */,
+				EA0D9925187B003600777AAC /* ActivityCell.m */,
+				EA0D9927187B004A00777AAC /* ActivityCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -372,6 +395,8 @@
 			children = (
 				EA66358C18704D6800336C57 /* UIFactory.h */,
 				EA66358D18704D6800336C57 /* UIFactory.m */,
+				EA0D9929187B0E2E00777AAC /* UIUtil.h */,
+				EA0D992A187B0E2E00777AAC /* UIUtil.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -470,6 +495,8 @@
 				EACC9C7118668FA200BE2017 /* NSDictionary+Ext.m */,
 				EACC9C7318668FF600BE2017 /* NSArray+Ext.h */,
 				EACC9C7418668FF600BE2017 /* NSArray+Ext.m */,
+				EA0D992C187B118200777AAC /* NSString+Ext.h */,
+				EA0D992D187B118200777AAC /* NSString+Ext.m */,
 			);
 			path = Extend;
 			sourceTree = "<group>";
@@ -633,6 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA66358118702BAB00336C57 /* SignController.xib in Resources */,
+				EA0D9928187B004A00777AAC /* ActivityCell.xib in Resources */,
 				EAE6336A1861F98C0072FED8 /* Images.xcassets in Resources */,
 				EAE633591861F98C0072FED8 /* InfoPlist.strings in Resources */,
 				EAE633621861F98C0072FED8 /* Main.storyboard in Resources */,
@@ -688,9 +716,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA4CDAE818633741008FE822 /* MMViewController.m in Sources */,
-				EA2B1405186C360300A2C065 /* Activity.m in Sources */,
 				EA2B140D186C360300A2C065 /* Sound.m in Sources */,
 				EA2B13E5186C329E00A2C065 /* PinError.m in Sources */,
+				EA0D9937187B240700777AAC /* CGUtil.m in Sources */,
 				EA2B13DE186C237900A2C065 /* PinService+User.m in Sources */,
 				EA2B13DA186C237900A2C065 /* PinService+Badge.m in Sources */,
 				EA2B13FD186C360300A2C065 /* Notice.m in Sources */,
@@ -699,6 +727,7 @@
 				EA2B13DB186C237900A2C065 /* PinService+Comment.m in Sources */,
 				EA2B13DD186C237900A2C065 /* PinService+Relation.m in Sources */,
 				EA2B13C9186C12D500A2C065 /* PinAPIClient.m in Sources */,
+				EA0D992B187B0E2E00777AAC /* UIUtil.m in Sources */,
 				EA4CDAF418633804008FE822 /* ActivityController.m in Sources */,
 				EA2B13DC186C237900A2C065 /* PinService+Message.m in Sources */,
 				EA66358E18704D6800336C57 /* UIFactory.m in Sources */,
@@ -706,13 +735,16 @@
 				EA4CDAF1186337E6008FE822 /* TimelineController.m in Sources */,
 				EAE6335F1861F98C0072FED8 /* AppDelegate.m in Sources */,
 				EA2B13ED186C360200A2C065 /* Image.m in Sources */,
+				EA0D9934187B15AB00777AAC /* Activity.m in Sources */,
 				EA2B13D9186C237900A2C065 /* PinService+Activity.m in Sources */,
 				EA2B1409186C360300A2C065 /* Message.m in Sources */,
 				EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */,
+				EA0D9931187B12F600777AAC /* ModelManager.m in Sources */,
 				EA6635921870546100336C57 /* NSString+Validate.m in Sources */,
 				EA4CDAEB1863375A008FE822 /* MMTableViewController.m in Sources */,
 				EA2B13E9186C360200A2C065 /* Comment.m in Sources */,
 				EA4CDAFA18633892008FE822 /* ProfileController.m in Sources */,
+				EA0D9926187B003600777AAC /* ActivityCell.m in Sources */,
 				EA4CDAF718633838008FE822 /* MessageController.m in Sources */,
 				EA2B13D2186C221A00A2C065 /* PinService+Auth.m in Sources */,
 				EA2B13F5186C360300A2C065 /* Contact.m in Sources */,
@@ -722,6 +754,7 @@
 				EA2B1411186C360300A2C065 /* Location.m in Sources */,
 				EA66359A18706C5A00336C57 /* MMPopMessageView.m in Sources */,
 				EA2B13F1186C360200A2C065 /* User.m in Sources */,
+				EA0D992E187B118200777AAC /* NSString+Ext.m in Sources */,
 				EA2B13CD186C138100A2C065 /* PinService.m in Sources */,
 				EACC9C7518668FF600BE2017 /* NSArray+Ext.m in Sources */,
 				EA6635961870632D00336C57 /* LeoLoadingView.m in Sources */,
@@ -740,7 +773,6 @@
 				EA2B13EA186C360200A2C065 /* Comment.m in Sources */,
 				EA2B140E186C360300A2C065 /* Sound.m in Sources */,
 				EA2B140A186C360300A2C065 /* Message.m in Sources */,
-				EA2B1406186C360300A2C065 /* Activity.m in Sources */,
 				EA2B13CA186C12D500A2C065 /* PinAPIClient.m in Sources */,
 				EACC9C7818672B7600BE2017 /* PinerModel.xcdatamodeld in Sources */,
 				EAE6337D1861F98C0072FED8 /* PinerTests.m in Sources */,

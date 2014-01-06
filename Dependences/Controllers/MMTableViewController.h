@@ -12,25 +12,62 @@
 //typedef void(^ LoadDataCallback) (NSError *error, id data);
 
 @interface MMTableViewController : UITableViewController
+{
+    @protected
+    NSMutableArray *_dataList;
+    BOOL _loading;
+    NSURLSessionTask *_loadDataTask;
+}
 
 
-@property(assign, nonatomic, readonly, getter = isLoading) BOOL loading;
 
+- (NSArray *)dataList;
+
+
+
+//Must be MMTableView subclass!!
+- (Class)tableViewCellClassAtIndexPath:(NSIndexPath *)indexPath;
+
+
+
+@end
+
+
+
+@interface MMTableViewController(LoadData)
 //call to refresh the data.
 - (void)startRefreshing;
 
 // should be override.
 - (void)startToReloadData;
-
 - (void)startToLoadMoreData;
+- (void)cancelLoadDataTask;
 
 // called by sub classes
-- (void)finishLoadMoreData;
-- (void)finishReloadData;
+- (void)finishLoadMoreData:(NSArray *)list;
+- (void)finishReloadData:(NSArray *)list;
+- (void)failToLoadData:(NSError *)error;
+
+- (BOOL)isLoading;
+@end
+
+
+@interface MMTableViewController(Activity)
 
 - (void)showActivityWithText:(NSString *)text;
 - (void)showActivity;
 - (void)endActivity;
 
-
 @end
+
+
+@interface MMTableViewController(CRUD)
+
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+- (NSIndexPath *)indexPathOfItem:(id)item;
+- (void)addItem:(id)item;
+- (void)deleteItem:(id)item;
+- (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)replaceItem:(id)item atIndexPath:(NSIndexPath *)indexPath;
+@end
+

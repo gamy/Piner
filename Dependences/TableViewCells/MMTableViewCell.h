@@ -17,13 +17,16 @@
 @property(nonatomic, strong)NSIndexPath *indexPath;
 
 - (id)item;
-- (void)updateWithItem:(id)item;
+- (void)setItem:(id)item;
+
+
++ (instancetype)cell;
++ (NSString *)identifier;
 
 
 //To be override.
-+ (instancetype)cell;
+- (void)setup;
 + (CGFloat)heightForItem:(id)item;
-+ (NSString *)identifier;
 - (void)layoutSubviews;
 
 @end

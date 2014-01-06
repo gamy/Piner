@@ -2,8 +2,8 @@
 //  Activity.m
 //  Piner
 //
-//  Created by Gamy on 13-12-26.
-//  Copyright (c) 2013年 Piner. All rights reserved.
+//  Created by Gamy on 14-1-7.
+//  Copyright (c) 2014年 Piner. All rights reserved.
 //
 
 #import "Activity.h"
@@ -23,6 +23,7 @@
 @dynamic shopId;
 @dynamic startDate;
 @dynamic type;
+@dynamic createDate;
 @dynamic comments;
 @dynamic guests;
 @dynamic host;

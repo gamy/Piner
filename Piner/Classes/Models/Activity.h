@@ -2,8 +2,8 @@
 //  Activity.h
 //  Piner
 //
-//  Created by Gamy on 13-12-26.
-//  Copyright (c) 2013年 Piner. All rights reserved.
+//  Created by Gamy on 14-1-7.
+//  Copyright (c) 2014年 Piner. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSNumber * shopId;
 @property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * type;
+@property (nonatomic, retain) NSDate * createDate;
 @property (nonatomic, retain) NSSet *comments;
 @property (nonatomic, retain) NSOrderedSet *guests;
 @property (nonatomic, retain) User *host;

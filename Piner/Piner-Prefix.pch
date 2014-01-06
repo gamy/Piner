@@ -23,5 +23,7 @@
     #import "KXKiOS7Colors.h"
     #import "UIFactory.h"
     #import "MMPopMessageView.h"
+    #import "PinModels.h"
+    #import "UIUtil.h"
 
 #endif

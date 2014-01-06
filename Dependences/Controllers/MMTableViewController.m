@@ -9,6 +9,7 @@
 #import "MMTableViewController.h"
 #import "MMActivityView.h"
 #import "LeoLoadingView.h"
+#import "MMTableViewCell.h"
 
 @interface MMTableViewController ()
 
@@ -30,59 +31,6 @@
     return self;
 }
 
-- (void)setupRefreshViews
-{
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(startToReloadData:) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl.attributedTitle = nil;
-    
-}
-
-
-
-- (void)viewDidLoad
-{
-    self.useLHLoadingView = YES;
-    [super viewDidLoad];
-    [self setupRefreshViews];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 10;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 44;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    [cell.textLabel setText:[NSString stringWithFormat:@"Row %d", indexPath.row]];
-
-    return cell;
-}
-
 //load data
 
 - (void)startToReloadData:(id)refreshControl
@@ -97,40 +45,81 @@
     }
 }
 
-- (void)startToReloadData
+
+- (void)setupRefreshViews
 {
-    NSLog(@"show Activity for reload data!!");
-    [self showActivityWithText:@"加载中..."];
-    NSLog(@"startToReloadData");
-}
-- (void)finishReloadData
-{
-    [self endActivity];
-    NSLog(@"finishReloadData");
-    [self.refreshControl endRefreshing];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(startToReloadData:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl.attributedTitle = nil;
-    _loading = NO;
+    
 }
 
-- (void)startToLoadMoreData
+
+
+- (void)viewDidLoad
 {
-    NSLog(@"show Activity for load more data!!");
-    [self showActivityWithText:@"加载中..."];
-    NSLog(@"<startToLoadMoreData>");
-}
-- (void)finishLoadMoreData
-{
-    [self endActivity];
-    NSLog(@"finishLoadMoreData");
-    _loading = NO;
+    _dataList = [NSMutableArray array];
+    self.useLHLoadingView = YES;
+    [super viewDidLoad];
+    [self setupRefreshViews];
 }
 
-- (void)startRefreshing
+- (void)didReceiveMemoryWarning
 {
-    [self.refreshControl beginRefreshing];
-    [self.refreshControl sendActionsForControlEvents:UIControlEventValueChanged];
-    [self.tableView setContentOffset:CGPointMake(0, -75) animated:YES];
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
+
+- (NSArray *)dataList
+{
+    return _dataList;
+}
+
+
+- (Class)tableViewCellClassAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [MMTableViewCell class];
+}
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+   return [_dataList count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id item = [self itemAtIndexPath:indexPath];
+    if (indexPath.row == 9) {
+        NSLog(@"stop here!!!");
+    }
+    Class cellClass = [self tableViewCellClassAtIndexPath:indexPath];
+    CGFloat height = [cellClass heightForItem:item];
+    NSLog(@"index = %d, cell class = %@, height = %f", indexPath.row, NSStringFromClass(cellClass), height);
+    return height;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Class cellClass = [self tableViewCellClassAtIndexPath:indexPath];
+    NSString *CellIdentifier = [cellClass identifier];
+    MMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [cellClass cell];
+    }
+    [cell setItem:[self itemAtIndexPath:indexPath]];
+    cell.indexPath = indexPath;
+    cell.delegate = self;
+    return cell;
+}
+
 
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
@@ -143,6 +132,85 @@
     }
 }
 
+
+@end
+
+
+@implementation MMTableViewController(LoadData)
+
+
+- (void)startRefreshing
+{
+    [self.refreshControl beginRefreshing];
+    [self.refreshControl sendActionsForControlEvents:UIControlEventValueChanged];
+    [self.tableView setContentOffset:CGPointMake(0, -75) animated:YES];
+}
+
+
+- (void)startToReloadData
+{
+    NSLog(@"show Activity for reload data!!");
+    [self showActivityWithText:@"加载中..."];
+    NSLog(@"startToReloadData");
+}
+
+- (void)startToLoadMoreData
+{
+    NSLog(@"show Activity for load more data!!");
+    [self showActivityWithText:@"加载中..."];
+    NSLog(@"<startToLoadMoreData>");
+}
+
+
+- (void)finishReloadData:(NSArray *)list
+{
+    [self endActivity];
+    NSLog(@"finishReloadData");
+    [self.refreshControl endRefreshing];
+    self.refreshControl.attributedTitle = nil;
+    _loading = NO;
+    if (list) {
+        [_dataList removeAllObjects];
+        [_dataList addObjectsFromArray:list];
+        [self.tableView reloadData];
+    }
+}
+
+
+- (void)finishLoadMoreData:(NSArray *)list
+{
+    [self endActivity];
+    NSLog(@"finishLoadMoreData");
+    _loading = NO;
+    if (list) {
+        [_dataList addObjectsFromArray:list];
+        [self.tableView reloadData];
+    }
+}
+
+- (void)failToLoadData:(NSError *)error
+{
+     NSLog(@"failToLoadData, error = %@", error);
+}
+
+- (void)cancelLoadDataTask
+{
+    [_loadDataTask cancel];
+    [self endActivity];
+    [self.refreshControl endRefreshing];
+}
+
+- (BOOL)isLoading
+{
+    return _loading;
+}
+
+
+@end
+
+
+
+@implementation MMTableViewController(Activity)
 
 //activity
 
@@ -185,5 +253,68 @@
     }
 }
 
+@end
 
+
+@implementation MMTableViewController(CRUD)
+
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath == nil) {
+        return nil;
+    }
+    if (indexPath.row < [_dataList count]) {
+        return _dataList[indexPath.row];
+    }
+    return nil;
+}
+
+- (NSIndexPath *)indexPathOfItem:(id)item
+{
+    if (item == nil) {
+        return nil;
+    }
+    NSUInteger index = [_dataList indexOfObject:item];
+    if (index != NSNotFound) {
+        return [NSIndexPath indexPathForRow:index inSection:0];
+    }
+    return nil;
+}
+
+- (void)addItem:(id)item
+{
+    if (item) {
+        [_dataList addObject:item];
+        NSIndexPath *indexPath = [self indexPathOfItem:item];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+- (void)deleteItem:(id)item
+{
+    NSIndexPath *indexPath = [self indexPathOfItem:item];
+    [self deleteItemAtIndexPath:indexPath];
+}
+- (void)deleteItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath) {
+        id item = [self itemAtIndexPath:indexPath];
+        if (item) {
+            [self.dataList delete:item];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
+}
+
+- (void)replaceItem:(id)item atIndexPath:(NSIndexPath *)indexPath
+{
+    id oldItem = [self itemAtIndexPath:indexPath];
+    if (oldItem) {
+        NSUInteger index = [self indexPathOfItem:oldItem];
+        if (index != NSNotFound && item) {
+            [_dataList replaceObjectAtIndex:index withObject:item];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
+
+}
 @end

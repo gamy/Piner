@@ -32,10 +32,16 @@
     return _item;
 }
 
+- (void)setup
+{
+    
+}
 
 + (instancetype)cell
 {
-   return [self viewFromXib:[self identifier] index:0];
+    MMTableViewCell *cell = [self viewFromXib:[self identifier] index:0];
+    [cell setup];
+    return cell;
 }
 + (CGFloat)heightForItem:(id)item
 {
@@ -43,14 +49,14 @@
 }
 + (NSString *)identifier
 {
-    return @"cell";
+    return NSStringFromClass([self class]);
 }
-- (void)updateWithItem:(id)item
+
+- (void)setItem:(id)item
 {
     _item = item;
     [self setNeedsLayout];
 }
-
 
 - (void)layoutSubviews
 {
