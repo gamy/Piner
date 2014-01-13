@@ -54,4 +54,83 @@ NSString *desc = @"新华网北京1月6日电（记者徐京跃、顾瑞珍）�
 }
 
 
+
++ (id)backgroundManager
+{
+    static dispatch_once_t onceToken;
+    static ModelManager *_bgManager;
+    dispatch_once(&onceToken, ^{
+        _bgManager = [self managerWithContext:[NSManagedObjectContext backgroundContext]];
+    });
+    return _bgManager;
+}
++ (id)mainManager
+{
+    static dispatch_once_t onceToken;
+    static ModelManager *_bgManager;
+    dispatch_once(&onceToken, ^{
+        _bgManager = [self managerWithContext:[NSManagedObjectContext mainContext]];
+    });
+    return _bgManager;
+}
++ (id)managerWithContext:(NSManagedObjectContext *)context
+{
+    ModelManager *manager = [[ModelManager alloc] init];
+    manager.context = context;
+    return manager;
+}
+
+
+
+
+- (User *)parseUserWithJson:(NSDictionary *)json
+{
+    NSString *oid = json[@"_id"];
+    if (json && oid) {
+        NSLog(@"oid = %@", oid);
+        User *user = [User fetchOrInsertSingleInContext:_context predicate:@"SELF.oid = %@", oid];
+        user.oid = oid;
+        [user populateWithDictionary:json];
+        return user;
+    }
+    return nil;
+}
+
+- (Activity *)parseActivityWithJson:(NSDictionary *)json
+{
+    NSString *oid = json[@"_id"];
+    if (json && oid) {
+        NSLog(@"oid = %@", oid);
+        Activity *activity = [Activity fetchOrInsertSingleInContext:_context predicate:@"SELF.oid = %@", oid];
+        activity.oid = oid;
+        [activity populateWithDictionary:json];
+        return activity;
+    }
+    return nil;
+}
+- (Message *)parseMessageWithJson:(NSDictionary *)json
+{
+    NSString *oid = json[@"_id"];
+    if (json && oid) {
+        NSLog(@"oid = %@", oid);
+        Message *message = [Message fetchOrInsertSingleInContext:_context predicate:@"SELF.oid = %@", oid];
+        message.oid = oid;
+        [message populateWithDictionary:json];
+        return message;
+    }
+    return nil;
+}
+- (Comment *)parseCommentWithJson:(NSDictionary *)json
+{
+    NSString *oid = json[@"_id"];
+    if (json && oid) {
+        NSLog(@"oid = %@", oid);
+        Comment *comment = [Comment fetchOrInsertSingleInContext:_context predicate:@"SELF.oid = %@", oid];
+        comment.oid = oid;
+        [comment populateWithDictionary:json];
+        return comment;
+    }
+    return nil;
+}
+
 @end

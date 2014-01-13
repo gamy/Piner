@@ -19,7 +19,7 @@
 @dynamic image;
 @dynamic joinCount;
 @dynamic maxNumber;
-@dynamic oId;
+@dynamic oid;
 @dynamic shopId;
 @dynamic startDate;
 @dynamic type;

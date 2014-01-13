@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-500" y="820"/>
         </scene>
-        <!--Business Controller - 活动-->
+        <!--Timeline Controller - 活动-->
         <scene sceneID="mZi-7k-zOA">
             <objects>
-                <tableViewController id="1aH-BL-p6n" customClass="BusinessController" sceneMemberID="viewController">
+                <tableViewController id="1aH-BL-p6n" customClass="TimelineController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4k4-rl-VQy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

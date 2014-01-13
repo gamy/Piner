@@ -32,8 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self startRefreshing];
-//    [SignController presentFromController:self];
+//    [self startRefreshing];
+    [SignController presentFromController:self];
 }
 
 - (void)didReceiveMemoryWarning

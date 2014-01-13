@@ -1,0 +1,33 @@
+
+/* Class = "IBUINavigationItem"; title = "活动"; ObjectID = "6TL-Pf-Lr3"; */
+"6TL-Pf-Lr3.title" = "活动";
+
+/* Class = "IBUITabBarItem"; title = "动态"; ObjectID = "Jr1-4E-HPB"; */
+"Jr1-4E-HPB.title" = "动态";
+
+/* Class = "IBUITabBarItem"; title = "我"; ObjectID = "PdU-Aw-IZJ"; */
+"PdU-Aw-IZJ.title" = "我";
+
+/* Class = "IBUITabBarItem"; title = "消息"; ObjectID = "cWa-6k-ewc"; */
+"cWa-6k-ewc.title" = "消息";
+
+/* Class = "IBUINavigationItem"; title = "活动"; ObjectID = "dW0-IS-OEF"; */
+"dW0-IS-OEF.title" = "活动";
+
+/* Class = "IBUISegmentedControl"; peV-Q5-cHZ.segmentTitles[0] = "评论"; ObjectID = "peV-Q5-cHZ"; */
+"peV-Q5-cHZ.segmentTitles[0]" = "评论";
+
+/* Class = "IBUISegmentedControl"; peV-Q5-cHZ.segmentTitles[1] = "私信"; ObjectID = "peV-Q5-cHZ"; */
+"peV-Q5-cHZ.segmentTitles[1]" = "私信";
+
+/* Class = "IBUISegmentedControl"; peV-Q5-cHZ.segmentTitles[2] = "通知"; ObjectID = "peV-Q5-cHZ"; */
+"peV-Q5-cHZ.segmentTitles[2]" = "通知";
+
+/* Class = "IBUINavigationItem"; title = "Root View Controller"; ObjectID = "xWP-H6-rT9"; */
+"xWP-H6-rT9.title" = "Root View Controller";
+
+/* Class = "IBUITabBarItem"; title = "活动"; ObjectID = "yNz-Un-TYn"; */
+"yNz-Un-TYn.title" = "活动";
+
+/* Class = "IBUINavigationController"; title = "动态"; ObjectID = "zCi-qZ-qbb"; */
+"zCi-qZ-qbb.title" = "动态";

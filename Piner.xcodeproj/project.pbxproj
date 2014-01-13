@@ -71,6 +71,9 @@
 		EA66359A18706C5A00336C57 /* MMPopMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66359918706C5A00336C57 /* MMPopMessageView.m */; };
 		EA9D9C79187EB1DC00C7EB2D /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9D9C78187EB1DC00C7EB2D /* BusinessCell.m */; };
 		EA9D9C7B187EB1EE00C7EB2D /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9D9C7A187EB1EE00C7EB2D /* BusinessCell.xib */; };
+		EAA8E080188445BA0054D7F9 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA8E07F188445BA0054D7F9 /* ProfileCell.m */; };
+		EAA8E082188445F60054D7F9 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA8E081188445F60054D7F9 /* ProfileCell.xib */; };
+		EAA8E085188446DC0054D7F9 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA8E084188446DC0054D7F9 /* AvatarView.m */; };
 		EAC7D9B01882659B00515F1F /* BusinessController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7D9AE1882659B00515F1F /* BusinessController.m */; };
 		EAC7D9B41882814000515F1F /* UIViewController+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7D9B31882814000515F1F /* UIViewController+Search.m */; };
 		EAC7D9B7188287D300515F1F /* UIImageView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7D9B6188287D300515F1F /* UIImageView+Ext.m */; };
@@ -206,6 +209,14 @@
 		EA9D9C77187EB1DC00C7EB2D /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
 		EA9D9C78187EB1DC00C7EB2D /* BusinessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
 		EA9D9C7A187EB1EE00C7EB2D /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
+		EAA8E07B188434B00054D7F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		EAA8E07C188434B00054D7F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EAA8E07D188434B00054D7F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EAA8E07E188445BA0054D7F9 /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
+		EAA8E07F188445BA0054D7F9 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
+		EAA8E081188445F60054D7F9 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		EAA8E083188446DC0054D7F9 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
+		EAA8E084188446DC0054D7F9 /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
 		EAC7D9AD1882659B00515F1F /* BusinessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessController.h; sourceTree = "<group>"; };
 		EAC7D9AE1882659B00515F1F /* BusinessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessController.m; sourceTree = "<group>"; };
 		EAC7D9B21882814000515F1F /* UIViewController+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Search.h"; sourceTree = "<group>"; };
@@ -376,7 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC7D9AC1882657B00515F1F /* Business */,
-				EA66358318702BD000336C57 /* Sign */,
+				EA66358318702BD000336C57 /* User */,
 				EA66358218702BBC00336C57 /* Tabs */,
 			);
 			path = Controllers;
@@ -450,6 +461,9 @@
 				EA9D9C77187EB1DC00C7EB2D /* BusinessCell.h */,
 				EA9D9C78187EB1DC00C7EB2D /* BusinessCell.m */,
 				EA9D9C7A187EB1EE00C7EB2D /* BusinessCell.xib */,
+				EAA8E07E188445BA0054D7F9 /* ProfileCell.h */,
+				EAA8E07F188445BA0054D7F9 /* ProfileCell.m */,
+				EAA8E081188445F60054D7F9 /* ProfileCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -461,6 +475,8 @@
 				EA66358D18704D6800336C57 /* UIFactory.m */,
 				EA0D9929187B0E2E00777AAC /* UIUtil.h */,
 				EA0D992A187B0E2E00777AAC /* UIUtil.m */,
+				EAA8E083188446DC0054D7F9 /* AvatarView.h */,
+				EAA8E084188446DC0054D7F9 /* AvatarView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -513,14 +529,14 @@
 			name = Tabs;
 			sourceTree = "<group>";
 		};
-		EA66358318702BD000336C57 /* Sign */ = {
+		EA66358318702BD000336C57 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				EA66357D18702BAB00336C57 /* SignController.h */,
 				EA66357E18702BAB00336C57 /* SignController.m */,
 				EA66357F18702BAB00336C57 /* SignController.xib */,
 			);
-			name = Sign;
+			name = User;
 			sourceTree = "<group>";
 		};
 		EA66358F1870544B00336C57 /* Utils */ = {
@@ -741,6 +757,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = EAE633421861F98C0072FED8;
 			productRefGroup = EAE6334C1861F98C0072FED8 /* Products */;
@@ -764,6 +781,7 @@
 				EAE633591861F98C0072FED8 /* InfoPlist.strings in Resources */,
 				EAE633621861F98C0072FED8 /* Main.storyboard in Resources */,
 				EA9D9C7B187EB1EE00C7EB2D /* BusinessCell.xib in Resources */,
+				EAA8E082188445F60054D7F9 /* ProfileCell.xib in Resources */,
 				EAC7D9CB1882AA4500515F1F /* MMPickingCityController.xib in Resources */,
 				EAC7D9CD1882AC9100515F1F /* cities.plist in Resources */,
 			);
@@ -826,10 +844,12 @@
 				EA4273B4187E439600AF8557 /* Business.m in Sources */,
 				EA9D9C79187EB1DC00C7EB2D /* BusinessCell.m in Sources */,
 				EA2B13DA186C237900A2C065 /* PinService+Badge.m in Sources */,
+				EAA8E085188446DC0054D7F9 /* AvatarView.m in Sources */,
 				EA5FC0C0187D9EE0002E9A82 /* DPAPI.m in Sources */,
 				EA2B13FD186C360300A2C065 /* Notice.m in Sources */,
 				EA663577186F0EF900336C57 /* MMActivityView.m in Sources */,
 				EA66357B186F131F00336C57 /* UIView+Ext.m in Sources */,
+				EAA8E080188445BA0054D7F9 /* ProfileCell.m in Sources */,
 				EAC7D9B7188287D300515F1F /* UIImageView+Ext.m in Sources */,
 				EA2B13DB186C237900A2C065 /* PinService+Comment.m in Sources */,
 				EA2B13DD186C237900A2C065 /* PinService+Relation.m in Sources */,
@@ -915,6 +935,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EAE633581861F98C0072FED8 /* en */,
+				EAA8E07C188434B00054D7F9 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -923,6 +944,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EAE633611861F98C0072FED8 /* Base */,
+				EAA8E07B188434B00054D7F9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -931,6 +953,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EAE6337A1861F98C0072FED8 /* en */,
+				EAA8E07D188434B00054D7F9 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

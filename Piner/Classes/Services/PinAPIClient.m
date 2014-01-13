@@ -10,7 +10,9 @@
 
 @implementation PinAPIClient
 
-static NSString * const PinAPIClientHost = @"http://localhost:3000/";
+static NSString * const PinAPIClientHost = @"http://192.168.13.104:3000/";
+
+//static NSString * const PinAPIClientHost = @"http://localhost:3000/";
 
 + (instancetype)sharedClient {
     static PinAPIClient *_sharedClient = nil;

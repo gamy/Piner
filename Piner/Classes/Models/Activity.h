@@ -17,7 +17,7 @@
 @property (nonatomic, retain) NSString * image;
 @property (nonatomic, retain) NSNumber * joinCount;
 @property (nonatomic, retain) NSNumber * maxNumber;
-@property (nonatomic, retain) NSString * oId;
+@property (nonatomic, retain) NSString * oid;
 @property (nonatomic, retain) NSNumber * shopId;
 @property (nonatomic, retain) NSDate * startDate;
 @property (nonatomic, retain) NSNumber * type;

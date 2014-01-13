@@ -75,6 +75,10 @@
     return _dataList;
 }
 
+- (void)disablePullRefresh
+{
+    self.refreshControl = nil;
+}
 
 - (Class)tableViewCellClassAtIndexPath:(NSIndexPath *)indexPath
 {

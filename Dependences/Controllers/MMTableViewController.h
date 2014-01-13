@@ -23,6 +23,9 @@
 
 @property(nonatomic, assign)BOOL hasMoreData;
 
+
+- (void)disablePullRefresh;
+
 - (NSArray *)dataList;
 
 //Must be MMTableView subclass!!

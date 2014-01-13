@@ -17,7 +17,7 @@
 {
     NSLog(@"_prefix:set($file $line:<$method>) Config NSLog!");
     [[NLCoreData shared] setModelName:@"PinerModel"];
-    [[MMLocationManager defaultManager] syncLoaction];
+//    [[MMLocationManager defaultManager] syncLoaction];
 //    [[PinService sharedService] signup:nil password:nil callback:NULL];
 //    NSLog(@"sign=%@",[DPService sign]);
     

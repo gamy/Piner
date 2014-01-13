@@ -24,7 +24,7 @@ typedef void (^SimpleCallback) (NSError *error);
 typedef void (^ListCallback) (NSError *error, NSArray *list, BOOL hasMoreData);
 typedef void (^ObjectCallback) (NSError *error, id object);
 
-typedef void (^JSONCallback) (NSError *error, NSDictionary *jsonData);
+typedef void (^JSONCallback) (NSError *error, NSDictionary *jsonDict, NSArray *jsonList);
 
 @interface PinService : NSObject
 {
@@ -34,6 +34,8 @@ typedef void (^JSONCallback) (NSError *error, NSDictionary *jsonData);
 
 + (instancetype)sharedService;
 + (instancetype)serviceWithAPIClinet:(AFHTTPSessionManager *)client;
+
+
 
 - (AFHTTPSessionManager *)apiClient;
 

@@ -47,18 +47,34 @@
     return  ^(NSURLSessionDataTask *task, id responseObject){
         if (callback != NULL) {
             NSError *error = nil;
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+            NSData *data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:&error];
+            NSDictionary *json = nil;
+            if (!error) {
+                json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            }
             if (!error) {
                 NSInteger code = [json[@"code"] integerValue];
                 if (code != 0) {
-                    NSString *message = json[@"msg"];
+                    NSString *message = json[@"message"];
                     error = [PinError errorWithCode:code message:message];
                 }
             }
+            NSArray *jsonList = nil;
+            NSDictionary *jsonDict = nil;
             if (error) {
+                NSLog(@"error = %@",error);
                 json = nil;
+            }else{
+                id data = json[@"data"];
+                if ([data isKindOfClass:[NSArray class]]) {
+                    jsonList = data;
+                    NSLog(@"return is list, list count = %d", [jsonList count]);
+                }else if([data isKindOfClass: [NSDictionary class]]){
+                    jsonDict = data;
+                    NSLog(@"return is dict, dict count = %d", [jsonDict count]);
+                }
             }
-            callback(error, json);
+            callback(error, jsonDict, jsonList);
         }
     };
 }
@@ -67,7 +83,7 @@
 {
     return ^(NSURLSessionDataTask *task, NSError *error){
         if (callback != NULL) {
-            callback(error, nil);
+            callback(error, nil, nil);
         }
     };
 }

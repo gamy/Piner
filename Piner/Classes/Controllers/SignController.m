@@ -8,6 +8,7 @@
 
 #import "SignController.h"
 #import "NSString+Validate.h"
+#import "PinService.h"
 
 @interface SignController ()
 - (IBAction)signup:(id)sender;
@@ -61,26 +62,51 @@
 }
 
 #define MIN_INPUT_LENGTH 6
-#define MAX_INPUT_LENGTH 6
+#define MAX_INPUT_LENGTH 16
 
 - (BOOL)checkFields
 {
-    
-    if([self.accountField.text isValidAccount]){
-        
+    if(![[self account] isValidAccount]){
+        return NO;
     }
-    
+    if (![[self password] checkMinLength:MIN_INPUT_LENGTH maxLength:MAX_INPUT_LENGTH]) {
+        return NO;
+    }
     return YES;
+}
+
+- (NSString *)account
+{
+    return _accountField.text;
+}
+
+- (NSString *)password
+{
+    return _passwordField.text;
 }
 
 - (IBAction)signup:(id)sender {
     if ([self checkFields]) {
-        
+        [[PinService sharedService] signup:[self account] password:[self password] callback:^(NSError *error, id object) {
+            if (!error) {
+                User *user = object;
+                NSLog(@"user.name = %@", user.name);
+//                [self dismissViewControllerAnimated:YES completion:NULL];
+            }
+        }];
     }
 }
 
 - (IBAction)signin:(id)sender {
-//    [self dismissViewControllerAnimated:YES completion:NO];
+    if ([self checkFields]) {
+        [[PinService sharedService] signin:[self account] password:[self password] callback:^(NSError *error, id object) {
+            if (!error) {
+                User *user = object;
+                NSLog(@"user.name = %@", user.name);
+//                [self dismissViewControllerAnimated:YES completion:NULL];
+            }
+        }];
+    }
 }
 
 - (IBAction)cancel:(id)sender {
