@@ -84,3 +84,31 @@
 }
 
 @end
+
+
+@implementation UIView(Touchable)
+
+
+- (void)enableTapWithTarget:(id)target
+       handleGuestureSelector:(SEL)selector
+{
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:selector];
+    tap.delegate = self;
+    [self addGestureRecognizer:tap];
+}
+
+- (void)disableTouch
+{
+    self.userInteractionEnabled = NO;
+    [self.gestureRecognizers enumerate:^(id value){
+        [self removeGestureRecognizer:value];
+    }];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return YES;
+}
+
+@end

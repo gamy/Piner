@@ -23,6 +23,42 @@
         <attribute name="messageCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="noticeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="Business" representedClassName="Business" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avg_price" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="avg_rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="branch_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="business_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="business_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categories" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coupon_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coupon_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="coupon_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deal_count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="decoration_grade" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="decoration_score" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="has_coupon" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="has_deal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="has_online_reservation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="online_reservation_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_grade" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="product_score" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rating_img_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating_s_img_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="review_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="s_photo_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="service_grade" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="service_score" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="telephone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="deals" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SimpleDeal" inverseName="bussiness" inverseEntity="SimpleDeal" syncable="YES"/>
+    </entity>
     <entity name="ChatMessage" representedClassName="ChatMessage" parentEntity="Message" syncable="YES">
         <relationship name="receiver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
         <relationship name="sender" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
@@ -68,6 +104,12 @@
         <relationship name="sound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" inverseName="message" inverseEntity="Sound" syncable="YES"/>
     </entity>
     <entity name="Notice" representedClassName="Notice" parentEntity="Message" syncable="YES"/>
+    <entity name="SimpleDeal" representedClassName="SimpleDeal" syncable="YES">
+        <attribute name="deal_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bussiness" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="deals" inverseEntity="Business" syncable="YES"/>
+    </entity>
     <entity name="Sound" representedClassName="Sound" syncable="YES">
         <attribute name="seconds" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
@@ -102,6 +144,7 @@
     <elements>
         <element name="Activity" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Badge" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Business" positionX="0" positionY="0" width="0" height="0"/>
         <element name="ChatMessage" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Comment" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Contact" positionX="0" positionY="0" width="0" height="0"/>
@@ -111,5 +154,6 @@
         <element name="Notice" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Sound" positionX="0" positionY="0" width="0" height="0"/>
         <element name="User" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SimpleDeal" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

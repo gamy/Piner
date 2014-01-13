@@ -25,5 +25,6 @@
     #import "MMPopMessageView.h"
     #import "PinModels.h"
     #import "UIUtil.h"
+    #import "MMLocationManager.h"
 
 #endif

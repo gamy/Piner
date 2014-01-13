@@ -36,4 +36,20 @@
 {
     return [obj isKindOfClass:[NSArray class]];
 }
+
+- (NSArray *)unique
+{
+    if ([self count] == 0) {
+        return self;
+    }
+    NSMutableSet *set = [NSMutableSet set];
+    NSMutableArray *ret = [NSMutableArray array];
+    for (id obj in self) {
+        if (![set containsObject:obj]) {
+            [set addObject:obj];
+            [ret addObject:obj];
+        }
+    }
+    return ret;
+}
 @end

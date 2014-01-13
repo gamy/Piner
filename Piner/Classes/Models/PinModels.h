@@ -21,3 +21,6 @@
 #import "Activity.h"
 #import "Comment.h"
 #import "User.h"
+
+#import "Business.h"
+#import "SimpleDeal.h"

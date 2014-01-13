@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+Ext.h"
+#import "UIViewController+Search.h"
 
 //typedef void(^ LoadDataCallback) (NSError *error, id data);
 
@@ -17,18 +18,15 @@
     NSMutableArray *_dataList;
     BOOL _loading;
     NSURLSessionTask *_loadDataTask;
+    NSInteger _page;
 }
 
-
+@property(nonatomic, assign)BOOL hasMoreData;
 
 - (NSArray *)dataList;
 
-
-
 //Must be MMTableView subclass!!
 - (Class)tableViewCellClassAtIndexPath:(NSIndexPath *)indexPath;
-
-
 
 @end
 
@@ -49,6 +47,9 @@
 - (void)failToLoadData:(NSError *)error;
 
 - (BOOL)isLoading;
+
+- (NSInteger)nextPage;
+
 @end
 
 

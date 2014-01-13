@@ -31,10 +31,10 @@
 }
 + (UIColor *)timeColor
 {
-    return [KXKiOS7Colors lightGrey];
+    return [KXKiOS7Colors darkGrey];
 }
 + (UIColor *)contentColor
 {
-    return [KXKiOS7Colors darkGrey];
+    return [UIColor darkTextColor];
 }
 @end

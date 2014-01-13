@@ -36,7 +36,7 @@ NSString *desc = @"新华网北京1月6日电（记者徐京跃、顾瑞珍）�
     NSInteger len = (rand() % [desc length]);
     len = MAX(2, len);
     activity.desc = [desc substringToIndex:len];
-    activity.createDate = [NSDate dateWithTimeIntervalSinceNow:-rand()];
+    activity.createDate = [NSDate dateWithTimeIntervalSinceNow:-(rand()%(3600*24*3))];
     NSInteger index = rand()%6;
     if (index < [images count]) {
         activity.image = images[index];

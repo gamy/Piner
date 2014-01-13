@@ -24,3 +24,14 @@
 
 
 @end
+
+
+@interface UIView(Touchable)<UIGestureRecognizerDelegate>
+
+- (void)enableTapWithTarget:(id)target
+       handleGuestureSelector:(SEL)selector;
+
+- (void)disableTouch;
+
+@end
+

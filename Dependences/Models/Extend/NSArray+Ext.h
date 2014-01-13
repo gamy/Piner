@@ -15,7 +15,7 @@ typedef void (^EnumValueBlock)(id value);
 
 - (void)enumerate:(EnumValueBlock) block;
 - (void)reverseEnumerate:(EnumValueBlock) block;
-
+- (NSArray *)unique;
 
 + (BOOL)isArray:(id)obj;
 @end

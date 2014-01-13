@@ -7,9 +7,10 @@
 //
 
 #import "ActivityCell.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+Ext.h"
 #import "NSString+Ext.h"
 #import "CGUtil.h"
+#import "NSDate+Ext.h"
 
 @interface ActivityCell()
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
@@ -29,7 +30,7 @@
 
 + (CGFloat)minHeight
 {
-    return 68.0f;
+    return 58.0f;
 }
 
 - (Activity *)activity
@@ -71,9 +72,10 @@
     
     Activity *activity = [self activity];
     NSURL *url = [[[activity host] avatar] URL];
-    [self.avatar setImageWithURL:url];
+    [self.avatar setImageWithURL:url placeholderImage:nil animated:YES];
     [self.nick setText:[[activity host] nick]];
     [self.content setText:[activity desc]];
+    [self.timestamp setText:[activity.createDate timelineStamp]];
 }
 
 @end
@@ -110,7 +112,7 @@
 
 + (CGFloat)minHeight
 {
-    return 184.0f;
+    return 181.0f;
 }
 
 @end

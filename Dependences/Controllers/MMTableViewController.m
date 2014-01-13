@@ -125,7 +125,7 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     if (decelerate) {
-        if ((scrollView.contentOffset.y + CGRectGetHeight(scrollView.frame)) >= scrollView.contentSize.height && !self.isLoading){
+        if ((scrollView.contentOffset.y + CGRectGetHeight(scrollView.frame)) >= scrollView.contentSize.height && !self.isLoading && self.hasMoreData){
             _loading = YES;
             [self startToLoadMoreData];
         }
@@ -149,6 +149,8 @@
 
 - (void)startToReloadData
 {
+    _page = 0;
+    _hasMoreData = YES;
     NSLog(@"show Activity for reload data!!");
     [self showActivityWithText:@"加载中..."];
     NSLog(@"startToReloadData");
@@ -170,6 +172,7 @@
     self.refreshControl.attributedTitle = nil;
     _loading = NO;
     if (list) {
+        _page ++;
         [_dataList removeAllObjects];
         [_dataList addObjectsFromArray:list];
         [self.tableView reloadData];
@@ -183,6 +186,7 @@
     NSLog(@"finishLoadMoreData");
     _loading = NO;
     if (list) {
+        _page ++;        
         [_dataList addObjectsFromArray:list];
         [self.tableView reloadData];
     }
@@ -190,6 +194,8 @@
 
 - (void)failToLoadData:(NSError *)error
 {
+    _loading = NO;
+    [self endActivity];
      NSLog(@"failToLoadData, error = %@", error);
 }
 
@@ -205,6 +211,10 @@
     return _loading;
 }
 
+- (NSInteger)nextPage
+{
+    return _page;
+}
 
 @end
 
@@ -309,8 +319,8 @@
 {
     id oldItem = [self itemAtIndexPath:indexPath];
     if (oldItem) {
-        NSUInteger index = [self indexPathOfItem:oldItem];
-        if (index != NSNotFound && item) {
+        NSUInteger index = indexPath.row;
+        if (indexPath != nil && item != nil) {
             [_dataList replaceObjectAtIndex:index withObject:item];
             [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
