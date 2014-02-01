@@ -16,6 +16,11 @@
 		EA0D9931187B12F600777AAC /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D9930187B12F600777AAC /* ModelManager.m */; };
 		EA0D9934187B15AB00777AAC /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D9933187B15AB00777AAC /* Activity.m */; };
 		EA0D9937187B240700777AAC /* CGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D9936187B240700777AAC /* CGUtil.m */; };
+		EA1F10941886D26600FBB37E /* CreateActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F10921886D26600FBB37E /* CreateActivityController.m */; };
+		EA1F109C1886D43C00FBB37E /* IQButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1F10981886D43C00FBB37E /* IQButtonBarArrowLeft@2x.png */; };
+		EA1F109D1886D43C00FBB37E /* IQButtonBarArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1F10991886D43C00FBB37E /* IQButtonBarArrowRight@2x.png */; };
+		EA1F109E1886D43C00FBB37E /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F109B1886D43C00FBB37E /* IQKeyboardManager.m */; };
+		EA1F10A11886E5AB00FBB37E /* CreateActivityController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1F10A01886E5AB00FBB37E /* CreateActivityController.xib */; };
 		EA2B13C9186C12D500A2C065 /* PinAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13C8186C12D500A2C065 /* PinAPIClient.m */; };
 		EA2B13CA186C12D500A2C065 /* PinAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13C8186C12D500A2C065 /* PinAPIClient.m */; };
 		EA2B13CD186C138100A2C065 /* PinService.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2B13CC186C138100A2C065 /* PinService.m */; };
@@ -131,6 +136,14 @@
 		EA0D9933187B15AB00777AAC /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		EA0D9935187B240700777AAC /* CGUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUtil.h; sourceTree = "<group>"; };
 		EA0D9936187B240700777AAC /* CGUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUtil.m; sourceTree = "<group>"; };
+		EA1F10911886D26600FBB37E /* CreateActivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateActivityController.h; sourceTree = "<group>"; };
+		EA1F10921886D26600FBB37E /* CreateActivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateActivityController.m; sourceTree = "<group>"; };
+		EA1F10981886D43C00FBB37E /* IQButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
+		EA1F10991886D43C00FBB37E /* IQButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
+		EA1F109A1886D43C00FBB37E /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		EA1F109B1886D43C00FBB37E /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		EA1F109F1886DA7B00FBB37E /* PinConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinConstants.h; sourceTree = "<group>"; };
+		EA1F10A01886E5AB00FBB37E /* CreateActivityController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateActivityController.xib; sourceTree = "<group>"; };
 		EA2B13C7186C12D500A2C065 /* PinAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinAPIClient.h; sourceTree = "<group>"; };
 		EA2B13C8186C12D500A2C065 /* PinAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinAPIClient.m; sourceTree = "<group>"; };
 		EA2B13CB186C138100A2C065 /* PinService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinService.h; sourceTree = "<group>"; };
@@ -284,9 +297,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA1F10901886D23A00FBB37E /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				EA1F10911886D26600FBB37E /* CreateActivityController.h */,
+				EA1F10921886D26600FBB37E /* CreateActivityController.m */,
+				EA1F10A01886E5AB00FBB37E /* CreateActivityController.xib */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		EA1F10961886D43C00FBB37E /* UIHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EA1F10971886D43C00FBB37E /* IQKeyboardManager */,
+			);
+			path = UIHelper;
+			sourceTree = "<group>";
+		};
+		EA1F10971886D43C00FBB37E /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA1F10981886D43C00FBB37E /* IQButtonBarArrowLeft@2x.png */,
+				EA1F10991886D43C00FBB37E /* IQButtonBarArrowRight@2x.png */,
+				EA1F109A1886D43C00FBB37E /* IQKeyboardManager.h */,
+				EA1F109B1886D43C00FBB37E /* IQKeyboardManager.m */,
+			);
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
 		EA4CDAD818631284008FE822 /* Dependences */ = {
 			isa = PBXGroup;
 			children = (
+				EA1F10961886D43C00FBB37E /* UIHelper */,
 				EA4CDAD918631284008FE822 /* Controllers */,
 				EA4CDADA18631284008FE822 /* Models */,
 				EA4CDADB18631284008FE822 /* SDKs */,
@@ -386,6 +429,7 @@
 		EA4CDAE118631295008FE822 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA1F10901886D23A00FBB37E /* Activity */,
 				EAC7D9AC1882657B00515F1F /* Business */,
 				EA66358318702BD000336C57 /* User */,
 				EA66358218702BBC00336C57 /* Tabs */,
@@ -426,6 +470,7 @@
 				EA2B13CF186C215300A2C065 /* PinModels.h */,
 				EA0D992F187B12F600777AAC /* ModelManager.h */,
 				EA0D9930187B12F600777AAC /* ModelManager.m */,
+				EA1F109F1886DA7B00FBB37E /* PinConstants.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -776,12 +821,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA66358118702BAB00336C57 /* SignController.xib in Resources */,
+				EA1F109D1886D43C00FBB37E /* IQButtonBarArrowRight@2x.png in Resources */,
 				EA0D9928187B004A00777AAC /* ActivityCell.xib in Resources */,
 				EAE6336A1861F98C0072FED8 /* Images.xcassets in Resources */,
 				EAE633591861F98C0072FED8 /* InfoPlist.strings in Resources */,
 				EAE633621861F98C0072FED8 /* Main.storyboard in Resources */,
+				EA1F10A11886E5AB00FBB37E /* CreateActivityController.xib in Resources */,
 				EA9D9C7B187EB1EE00C7EB2D /* BusinessCell.xib in Resources */,
 				EAA8E082188445F60054D7F9 /* ProfileCell.xib in Resources */,
+				EA1F109C1886D43C00FBB37E /* IQButtonBarArrowLeft@2x.png in Resources */,
 				EAC7D9CB1882AA4500515F1F /* MMPickingCityController.xib in Resources */,
 				EAC7D9CD1882AC9100515F1F /* cities.plist in Resources */,
 			);
@@ -843,6 +891,7 @@
 				EA2B13DE186C237900A2C065 /* PinService+User.m in Sources */,
 				EA4273B4187E439600AF8557 /* Business.m in Sources */,
 				EA9D9C79187EB1DC00C7EB2D /* BusinessCell.m in Sources */,
+				EA1F109E1886D43C00FBB37E /* IQKeyboardManager.m in Sources */,
 				EA2B13DA186C237900A2C065 /* PinService+Badge.m in Sources */,
 				EAA8E085188446DC0054D7F9 /* AvatarView.m in Sources */,
 				EA5FC0C0187D9EE0002E9A82 /* DPAPI.m in Sources */,
@@ -868,6 +917,7 @@
 				EA2B13D9186C237900A2C065 /* PinService+Activity.m in Sources */,
 				EA2B1409186C360300A2C065 /* Message.m in Sources */,
 				EACC63531865631500B6D186 /* PinerModel.xcdatamodeld in Sources */,
+				EA1F10941886D26600FBB37E /* CreateActivityController.m in Sources */,
 				EA0D9931187B12F600777AAC /* ModelManager.m in Sources */,
 				EA6635921870546100336C57 /* NSString+Validate.m in Sources */,
 				EA4CDAEB1863375A008FE822 /* MMTableViewController.m in Sources */,

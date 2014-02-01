@@ -35,7 +35,7 @@
     return nil;
 }
 
-
+/*
 #define MASKVIEW_TAG 20141111
 #define MASK_COLOR [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3]
 
@@ -64,10 +64,11 @@
 {
     [[self maskView] removeFromSuperview];
 }
+*/
 
 - (void)hideSearchViews
 {
-    [self removeMaskView];
+//    [self removeMaskView];
     [[self searchBar] setShowsCancelButton:NO animated:YES];
     [[self searchBar] resignFirstResponder];
     if ([self.view isKindOfClass:[UIScrollView class]]) {
@@ -83,7 +84,7 @@
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    [self addMaskView];
+//    [self addMaskView];
     [searchBar setShowsCancelButton:YES animated:YES];
 }
 

@@ -26,5 +26,5 @@
     #import "PinModels.h"
     #import "UIUtil.h"
     #import "MMLocationManager.h"
-
+    #import "PinConstants.h"
 #endif

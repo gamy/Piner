@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "PinService.h"
 #import "DPService.h"
-
+#import "IQKeyboardManager.h"
 
 @implementation AppDelegate
 
@@ -17,11 +17,8 @@
 {
     NSLog(@"_prefix:set($file $line:<$method>) Config NSLog!");
     [[NLCoreData shared] setModelName:@"PinerModel"];
-//    [[MMLocationManager defaultManager] syncLoaction];
-//    [[PinService sharedService] signup:nil password:nil callback:NULL];
-//    NSLog(@"sign=%@",[DPService sign]);
-    
-    
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+    [[IQKeyboardManager sharedManager] setShouldResignOnTouchOutside:YES];
     return YES;
 }
 							

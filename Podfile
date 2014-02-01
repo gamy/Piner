@@ -10,3 +10,6 @@ pod 'SDWebImage', '~> 3.5.1'
 pod 'FMDB', '~> 2.1'
 pod 'MTLog', '~> 0.6.1'
 pod 'NLCoreData', '~> 0.5.3'
+pod 'CKCalendar', '~> 1.0.0'
+pod 'GCPlaceholderTextView', '~> 1.0.1'
+
